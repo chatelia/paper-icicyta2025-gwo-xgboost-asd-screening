@@ -1,0 +1,4 @@
+Split,Original_Samples,Original_Features,Cleaned_Samples,Cleaned_Features,Features_Removed,Ethnicity_Removed,Quality_Check
+Train,1270,27,1270,26,1,Yes,PASS
+Val,318,27,318,26,1,Yes,PASS
+Test,397,27,397,26,1,Yes,PASS

@@ -1,0 +1,61 @@
+{
+  "feature_columns": {
+    "numeric": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9",
+      "A10_Autism_Spectrum_Quotient",
+      "Social_Responsiveness_Scale",
+      "Age_Years",
+      "Qchat_10_Score",
+      "Childhood Autism Rating Scale"
+    ],
+    "categorical": [
+      "Speech Delay/Language Disorder",
+      "Learning disorder",
+      "Genetic_Disorders",
+      "Depression",
+      "Global developmental delay/intellectual disability",
+      "Social/Behavioural Issues",
+      "Anxiety_disorder",
+      "Sex",
+      "Jaundice",
+      "Family_mem_with_ASD",
+      "Who_completed_the_test"
+    ],
+    "scale": [
+      "Social_Responsiveness_Scale",
+      "Age_Years",
+      "Qchat_10_Score",
+      "Childhood Autism Rating Scale"
+    ],
+    "binary": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9",
+      "A10_Autism_Spectrum_Quotient"
+    ]
+  },
+  "preprocessing_steps": [
+    "numeric_imputer",
+    "categorical_imputer",
+    "label_encoders",
+    "scaler",
+    "scale_columns",
+    "feature_columns"
+  ],
+  "timestamp": "2025-10-06T06:28:57.817602",
+  "random_state": 42
+}
