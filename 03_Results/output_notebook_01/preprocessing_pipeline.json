@@ -1,0 +1,83 @@
+{
+  "numeric_imputer": {
+    "type": "SimpleImputer",
+    "params": {
+      "add_indicator": false,
+      "copy": true,
+      "fill_value": null,
+      "keep_empty_features": false,
+      "missing_values": NaN,
+      "strategy": "median"
+    }
+  },
+  "categorical_imputer": {
+    "type": "SimpleImputer",
+    "params": {
+      "add_indicator": false,
+      "copy": true,
+      "fill_value": null,
+      "keep_empty_features": false,
+      "missing_values": NaN,
+      "strategy": "most_frequent"
+    }
+  },
+  "label_encoders": "<class 'dict'>",
+  "scaler": {
+    "type": "StandardScaler",
+    "params": {
+      "copy": true,
+      "with_mean": true,
+      "with_std": true
+    }
+  },
+  "scale_columns": "<class 'list'>",
+  "feature_columns": {
+    "numeric": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9",
+      "A10_Autism_Spectrum_Quotient",
+      "Social_Responsiveness_Scale",
+      "Age_Years",
+      "Qchat_10_Score",
+      "Childhood Autism Rating Scale"
+    ],
+    "categorical": [
+      "Speech Delay/Language Disorder",
+      "Learning disorder",
+      "Genetic_Disorders",
+      "Depression",
+      "Global developmental delay/intellectual disability",
+      "Social/Behavioural Issues",
+      "Anxiety_disorder",
+      "Sex",
+      "Jaundice",
+      "Family_mem_with_ASD",
+      "Who_completed_the_test"
+    ],
+    "scale": [
+      "Social_Responsiveness_Scale",
+      "Age_Years",
+      "Qchat_10_Score",
+      "Childhood Autism Rating Scale"
+    ],
+    "binary": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9",
+      "A10_Autism_Spectrum_Quotient"
+    ]
+  }
+}

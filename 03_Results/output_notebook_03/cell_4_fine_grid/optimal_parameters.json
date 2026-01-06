@@ -1,0 +1,24 @@
+{
+  "population_size": 25,
+  "max_iterations": 90,
+  "validation_auc_mean": 0.9963961452691942,
+  "validation_auc_std": 1.1102230246251565e-16,
+  "selected_features": [
+    "A1",
+    "A3",
+    "A4",
+    "A5",
+    "A8",
+    "A9",
+    "A10_Autism_Spectrum_Quotient",
+    "Social_Responsiveness_Scale",
+    "Age_Years",
+    "Qchat_10_Score",
+    "Global developmental delay/intellectual disability",
+    "Social/Behavioural Issues",
+    "Childhood Autism Rating Scale",
+    "Sex",
+    "Family_mem_with_ASD"
+  ],
+  "n_features": 15
+}

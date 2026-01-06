@@ -1,0 +1,22 @@
+{
+  "experiment": "Baseline 3 Testing: XGBoost with RFECV (CPU)",
+  "feature_selection": {
+    "method": "RFECV (wrapper - model-guided)",
+    "mean_features_selected": 25.0,
+    "std_features_selected": 0.0,
+    "feature_reduction_percent": 0.0
+  },
+  "test_set_size": 397,
+  "n_models_tested": 10,
+  "compute_backend": "CPU",
+  "performance": {
+    "validation_auc_mean": 0.9963961452691941,
+    "test_auc_mean": 0.9981446460516228,
+    "generalization_gap": -0.001748500782428719
+  },
+  "best_run": {
+    "run_id": 9,
+    "test_auc": 0.9983005366726297
+  },
+  "overfitting_status": "GOOD_GENERALIZATION"
+}

@@ -1,0 +1,348 @@
+{
+  "experiment_info": {
+    "name": "Baseline 2: XGBoost with SelectKBest (CPU)",
+    "description": "Filter method - ANOVA F-test statistical ranking, CPU implementation",
+    "timestamp": "2025-11-23T09:26:17.346600",
+    "n_runs": 10,
+    "gpu_available": false,
+    "compute_backend": "CPU"
+  },
+  "k_value_optimization": {
+    "k_values_tested": [
+      8,
+      12,
+      16,
+      20
+    ],
+    "results": {
+      "8": {
+        "val_auc": 0.967087448231921,
+        "selected_features": [
+          "A1",
+          "A2",
+          "A4",
+          "A5",
+          "A6",
+          "A7",
+          "A9",
+          "Qchat_10_Score"
+        ]
+      },
+      "12": {
+        "val_auc": 0.9949625676967188,
+        "selected_features": [
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9",
+          "Qchat_10_Score",
+          "Global developmental delay/intellectual disability",
+          "Sex"
+        ]
+      },
+      "16": {
+        "val_auc": 0.9949625676967188,
+        "selected_features": [
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9",
+          "Qchat_10_Score",
+          "Speech Delay/Language Disorder",
+          "Depression",
+          "Global developmental delay/intellectual disability",
+          "Social/Behavioural Issues",
+          "Anxiety_disorder",
+          "Sex"
+        ]
+      },
+      "20": {
+        "val_auc": 0.9963762344695763,
+        "selected_features": [
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9",
+          "Social_Responsiveness_Scale",
+          "Qchat_10_Score",
+          "Speech Delay/Language Disorder",
+          "Learning disorder",
+          "Genetic_Disorders",
+          "Depression",
+          "Global developmental delay/intellectual disability",
+          "Social/Behavioural Issues",
+          "Anxiety_disorder",
+          "Sex",
+          "Family_mem_with_ASD"
+        ]
+      }
+    },
+    "optimal_k": 20,
+    "optimal_val_auc": 0.9963762344695763
+  },
+  "feature_selection": {
+    "method": "SelectKBest - f_classif",
+    "n_features_selected": 20,
+    "selected_features": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9",
+      "Social_Responsiveness_Scale",
+      "Qchat_10_Score",
+      "Speech Delay/Language Disorder",
+      "Learning disorder",
+      "Genetic_Disorders",
+      "Depression",
+      "Global developmental delay/intellectual disability",
+      "Social/Behavioural Issues",
+      "Anxiety_disorder",
+      "Sex",
+      "Family_mem_with_ASD"
+    ],
+    "f_scores": {
+      "A1": 297.6151232264358,
+      "A2": 292.55922708738865,
+      "A3": 249.2245177173818,
+      "A4": 360.68601099986,
+      "A5": 398.8836451065098,
+      "A6": 422.2411933298837,
+      "A7": 393.8526204272306,
+      "A8": 272.3405296512463,
+      "A9": 431.1773984820496,
+      "Social_Responsiveness_Scale": 112.99163946054209,
+      "Qchat_10_Score": 296.9378067962713,
+      "Speech Delay/Language Disorder": 147.0398456565882,
+      "Learning disorder": 137.78551817233162,
+      "Genetic_Disorders": 129.98171001727943,
+      "Depression": 148.7565111207951,
+      "Global developmental delay/intellectual disability": 150.48678459608138,
+      "Social/Behavioural Issues": 147.23691281749942,
+      "Anxiety_disorder": 144.23163389160828,
+      "Sex": 286.1232944121145,
+      "Family_mem_with_ASD": 100.0700082218442
+    }
+  },
+  "configuration": {
+    "xgboost_config": {
+      "n_estimators": 500,
+      "max_depth": 8,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "tree_method": "hist",
+      "predictor": "cpu_predictor",
+      "objective": "binary:logistic",
+      "eval_metric": "auc",
+      "verbosity": 0,
+      "random_state": 42
+    },
+    "selectkbest_config": {
+      "selection_method": "f_classif",
+      "k_values": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "selection_strategy": "statistical_ranking"
+    }
+  },
+  "training_results": {
+    "runs": [
+      {
+        "run_id": 0,
+        "random_state": 42,
+        "n_features_selected": 20,
+        "training_time_seconds": 0.16,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695763,
+          "log_loss": 0.06362439852283934
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_2_selectkbest/models/run_0_model.json"
+      },
+      {
+        "run_id": 1,
+        "random_state": 43,
+        "n_features_selected": 20,
+        "training_time_seconds": 0.17,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695763,
+          "log_loss": 0.06362253137498927
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_2_selectkbest/models/run_1_model.json"
+      },
+      {
+        "run_id": 2,
+        "random_state": 44,
+        "n_features_selected": 20,
+        "training_time_seconds": 0.19,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695762,
+          "log_loss": 0.0637255042168475
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_2_selectkbest/models/run_2_model.json"
+      },
+      {
+        "run_id": 3,
+        "random_state": 45,
+        "n_features_selected": 20,
+        "training_time_seconds": 0.16,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695763,
+          "log_loss": 0.06338008747435887
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_2_selectkbest/models/run_3_model.json"
+      },
+      {
+        "run_id": 4,
+        "random_state": 46,
+        "n_features_selected": 20,
+        "training_time_seconds": 0.17,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695762,
+          "log_loss": 0.06349841111094279
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_2_selectkbest/models/run_4_model.json"
+      },
+      {
+        "run_id": 5,
+        "random_state": 47,
+        "n_features_selected": 20,
+        "training_time_seconds": 0.16,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695762,
+          "log_loss": 0.06338972040794033
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_2_selectkbest/models/run_5_model.json"
+      },
+      {
+        "run_id": 6,
+        "random_state": 48,
+        "n_features_selected": 20,
+        "training_time_seconds": 0.16,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695762,
+          "log_loss": 0.06326554453693753
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_2_selectkbest/models/run_6_model.json"
+      },
+      {
+        "run_id": 7,
+        "random_state": 49,
+        "n_features_selected": 20,
+        "training_time_seconds": 0.2,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695763,
+          "log_loss": 0.06369199343137537
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_2_selectkbest/models/run_7_model.json"
+      },
+      {
+        "run_id": 8,
+        "random_state": 50,
+        "n_features_selected": 20,
+        "training_time_seconds": 0.17,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695762,
+          "log_loss": 0.06324918554129957
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_2_selectkbest/models/run_8_model.json"
+      },
+      {
+        "run_id": 9,
+        "random_state": 51,
+        "n_features_selected": 20,
+        "training_time_seconds": 0.18,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695763,
+          "log_loss": 0.0635647180874537
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_2_selectkbest/models/run_9_model.json"
+      }
+    ],
+    "statistics": {
+      "mean_val_auc": 0.9963762344695762,
+      "std_val_auc": 8.275113844157577e-17,
+      "min_val_auc": 0.9963762344695762,
+      "max_val_auc": 0.9963762344695763,
+      "median_val_auc": 0.9963762344695763,
+      "best_run_id": 0,
+      "total_training_time_seconds": 1.97
+    }
+  },
+  "best_model": {
+    "run_id": 0,
+    "random_state": 42,
+    "validation_auc": 0.9963762344695763,
+    "validation_metrics": {
+      "accuracy": 0.9591194968553459,
+      "precision_macro": 0.9648648648648649,
+      "recall_macro": 0.9554794520547945,
+      "f1_macro": 0.9584952260474082,
+      "roc_auc": 0.9963762344695763,
+      "log_loss": 0.06362439852283934
+    },
+    "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_2_selectkbest/baseline_2_best_model.json"
+  }
+}

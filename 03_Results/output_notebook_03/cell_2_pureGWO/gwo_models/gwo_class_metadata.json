@@ -1,0 +1,32 @@
+{
+  "class_name": "GreyWolfOptimizer",
+  "methods": [
+    "initialize_population",
+    "update_positions",
+    "optimize"
+  ],
+  "attributes": [
+    "n_wolves",
+    "max_iterations",
+    "n_features",
+    "min_features",
+    "max_features",
+    "fitness_func",
+    "random_state",
+    "verbose"
+  ],
+  "return_structure": {
+    "best_position": "Binary feature vector (np.ndarray)",
+    "best_fitness": "Validation AUC (float)",
+    "convergence_curve": "Fitness per iteration (list)",
+    "convergence_iteration": "Iteration reaching 95% final fitness (int)",
+    "n_features_selected": "Number of selected features (int)",
+    "total_iterations": "Maximum iterations executed (int)",
+    "sanity_check": "Post-optimization validation metrics (dict)"
+  },
+  "usage_example": {
+    "initialization": "gwo = GreyWolfOptimizer(n_wolves=40, max_iterations=150, ...)",
+    "optimization": "results = gwo.optimize()",
+    "access_results": "best_features = results[\"best_position\"]"
+  }
+}

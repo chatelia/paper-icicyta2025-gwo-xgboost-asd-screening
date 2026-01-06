@@ -1,0 +1,30 @@
+{
+  "experiment": "Baseline 2: XGBoost with SelectKBest (CPU)",
+  "feature_selection": {
+    "method": "Filter (ANOVA F-test)",
+    "k_values_tested": [
+      8,
+      12,
+      16,
+      20
+    ],
+    "optimal_k": 20,
+    "original_features": 25,
+    "reduction_percent": 20.0
+  },
+  "n_runs": 10,
+  "compute_backend": "CPU",
+  "validation_auc": {
+    "mean": 0.9963762344695762,
+    "std": 8.275113844157577e-17,
+    "range": [
+      0.9963762344695762,
+      0.9963762344695763
+    ]
+  },
+  "best_run": {
+    "run_id": 0,
+    "validation_auc": 0.9963762344695763
+  },
+  "training_time_total_minutes": 0.03
+}

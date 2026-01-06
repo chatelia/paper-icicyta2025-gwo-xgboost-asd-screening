@@ -1,0 +1,220 @@
+{
+  "experiment_info": {
+    "name": "Baseline 1: XGBoost with All Features (CPU)",
+    "description": "Control group - no feature selection applied, CPU implementation",
+    "timestamp": "2025-11-23T09:26:08.749918",
+    "n_runs": 10,
+    "gpu_available": false,
+    "compute_backend": "CPU"
+  },
+  "configuration": {
+    "xgboost_config": {
+      "n_estimators": 500,
+      "max_depth": 8,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "tree_method": "hist",
+      "predictor": "cpu_predictor",
+      "objective": "binary:logistic",
+      "eval_metric": "auc",
+      "verbosity": 0,
+      "random_state": 42
+    },
+    "n_features": 25,
+    "feature_names": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9",
+      "A10_Autism_Spectrum_Quotient",
+      "Social_Responsiveness_Scale",
+      "Age_Years",
+      "Qchat_10_Score",
+      "Speech Delay/Language Disorder",
+      "Learning disorder",
+      "Genetic_Disorders",
+      "Depression",
+      "Global developmental delay/intellectual disability",
+      "Social/Behavioural Issues",
+      "Childhood Autism Rating Scale",
+      "Anxiety_disorder",
+      "Sex",
+      "Jaundice",
+      "Family_mem_with_ASD",
+      "Who_completed_the_test"
+    ]
+  },
+  "training_results": {
+    "runs": [
+      {
+        "run_id": 0,
+        "random_state": 42,
+        "training_time_seconds": 0.82,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963961452691938,
+          "log_loss": 0.06359184149028858
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_1_all_features/models/run_0_model.json"
+      },
+      {
+        "run_id": 1,
+        "random_state": 43,
+        "training_time_seconds": 0.73,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.996396145269194,
+          "log_loss": 0.06361848703456935
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_1_all_features/models/run_1_model.json"
+      },
+      {
+        "run_id": 2,
+        "random_state": 44,
+        "training_time_seconds": 0.27,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.996396145269194,
+          "log_loss": 0.0636121767659374
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_1_all_features/models/run_2_model.json"
+      },
+      {
+        "run_id": 3,
+        "random_state": 45,
+        "training_time_seconds": 0.23,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.996396145269194,
+          "log_loss": 0.06338573557420743
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_1_all_features/models/run_3_model.json"
+      },
+      {
+        "run_id": 4,
+        "random_state": 46,
+        "training_time_seconds": 0.22,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.996396145269194,
+          "log_loss": 0.06351615910348181
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_1_all_features/models/run_4_model.json"
+      },
+      {
+        "run_id": 5,
+        "random_state": 47,
+        "training_time_seconds": 0.22,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.996396145269194,
+          "log_loss": 0.06328927992614573
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_1_all_features/models/run_5_model.json"
+      },
+      {
+        "run_id": 6,
+        "random_state": 48,
+        "training_time_seconds": 0.28,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.996396145269194,
+          "log_loss": 0.06343107187818872
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_1_all_features/models/run_6_model.json"
+      },
+      {
+        "run_id": 7,
+        "random_state": 49,
+        "training_time_seconds": 0.23,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.996396145269194,
+          "log_loss": 0.0636702137996787
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_1_all_features/models/run_7_model.json"
+      },
+      {
+        "run_id": 8,
+        "random_state": 50,
+        "training_time_seconds": 0.22,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.996396145269194,
+          "log_loss": 0.06337762844934847
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_1_all_features/models/run_8_model.json"
+      },
+      {
+        "run_id": 9,
+        "random_state": 51,
+        "training_time_seconds": 0.22,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.996396145269194,
+          "log_loss": 0.06362907592338582
+        },
+        "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_1_all_features/models/run_9_model.json"
+      }
+    ],
+    "statistics": {
+      "mean_val_auc": 0.9963961452691941,
+      "std_val_auc": 1.3343220141622404e-16,
+      "min_val_auc": 0.9963961452691938,
+      "max_val_auc": 0.996396145269194,
+      "median_val_auc": 0.996396145269194,
+      "best_run_id": 1,
+      "total_training_time_seconds": 3.69
+    }
+  },
+  "best_model": {
+    "run_id": 1,
+    "random_state": 43,
+    "validation_auc": 0.996396145269194,
+    "validation_metrics": {
+      "accuracy": 0.9591194968553459,
+      "precision_macro": 0.9648648648648649,
+      "recall_macro": 0.9554794520547945,
+      "f1_macro": 0.9584952260474082,
+      "roc_auc": 0.996396145269194,
+      "log_loss": 0.06361848703456935
+    },
+    "model_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup/baseline_1_all_features/baseline_1_best_model.json"
+  }
+}

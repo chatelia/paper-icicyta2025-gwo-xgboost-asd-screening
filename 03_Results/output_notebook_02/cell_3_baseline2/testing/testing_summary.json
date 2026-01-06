@@ -1,0 +1,20 @@
+{
+  "experiment": "Baseline 2 Testing: XGBoost with SelectKBest",
+  "feature_selection": {
+    "method": "SelectKBest (f_classif)",
+    "n_features_selected": 20,
+    "feature_reduction_percent": 20.0
+  },
+  "test_set_size": 397,
+  "n_models_tested": 10,
+  "performance": {
+    "validation_auc_mean": 0.9963762344695762,
+    "test_auc_mean": 0.9979018655762841,
+    "generalization_gap": -0.001525631106707892
+  },
+  "best_run": {
+    "run_id": 0,
+    "test_auc": 0.9979427549194991
+  },
+  "overfitting_status": "GOOD_GENERALIZATION"
+}

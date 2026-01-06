@@ -1,0 +1,86 @@
+{
+  "algorithm": "Grey Wolf Optimizer (GWO)",
+  "implementation": "Pure GWO with Random Constraint Enforcement",
+  "reference": "Mirjalili et al. (2014), Emary et al. (2016)",
+  "bug_fixes": [
+    {
+      "issue": "TypeError in np.random.choice",
+      "cause": "numpy scalar types (np.int64, np.float64) not accepted",
+      "solution": "Explicit type conversion to Python native int",
+      "affected_functions": [
+        "enforce_constraints",
+        "fitness_function",
+        "optimize"
+      ]
+    },
+    {
+      "issue": "TypeError: optimize() got an unexpected keyword argument \"callback\"",
+      "cause": "optimize method did not accept a callback parameter",
+      "solution": "Added optional callback parameter to optimize() and invoked it within the loop",
+      "affected_functions": [
+        "optimize"
+      ]
+    },
+    {
+      "issue": "Incorrect \"a\" parameter calculation",
+      "cause": "Calculation was `2.0 - 2.0 * iteration / self.max_iterations` which resulted in `a` being 2.0 at the last iteration instead of 0.0",
+      "solution": "Changed calculation to `2.0 - 2.0 * (iteration + 1) / self.max_iterations`",
+      "affected_functions": [
+        "optimize"
+      ]
+    }
+  ],
+  "parameters": {
+    "min_features": 8,
+    "max_features": 15,
+    "random_state": 42
+  },
+  "binary_conversion": {
+    "method": "simple_threshold",
+    "threshold": 0.5,
+    "reference": "Emary et al. (2016)"
+  },
+  "constraint_enforcement": {
+    "strategy": "random",
+    "description": "Unbiased random add/remove to satisfy [min, max] constraints",
+    "rationale": "Preserves GWO stochastic exploration, aligned with literature"
+  },
+  "fitness_function": {
+    "method": "XGBoost wrapper",
+    "metric": "validation_auc",
+    "xgboost_config": {
+      "n_estimators": 150,
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "subsample": 1.0,
+      "colsample_bytree": 1.0,
+      "tree_method": "hist",
+      "predictor": "cpu_predictor",
+      "eval_metric": "auc",
+      "random_state": 42,
+      "objective": "binary:logistic",
+      "verbosity": 0
+    }
+  },
+  "sanity_checks": {
+    "clarity_score": {
+      "excellent": ">0.35",
+      "good": "0.25-0.35",
+      "acceptable": "0.15-0.25",
+      "problematic": "<0.15"
+    },
+    "oscillation_pct": {
+      "excellent": "<0.10",
+      "good": "0.10-0.20",
+      "acceptable": "0.20-0.30",
+      "problematic": ">0.30"
+    }
+  },
+  "metadata": {
+    "cell": "Cell 2",
+    "notebook": "03_Proposed_GWO_XGBoost.ipynb",
+    "author": "Chatelia Dyah Prameswari (1301223320)",
+    "timestamp": "2025-10-24T06:22:58.518350",
+    "version": "1.2_bugfix_callback"
+  }
+}

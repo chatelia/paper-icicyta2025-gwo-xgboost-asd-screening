@@ -1,0 +1,351 @@
+{
+  "experiment_info": {
+    "name": "Baseline 2 Testing: XGBoost with SelectKBest",
+    "description": "Test set evaluation for all 10 trained models with selected features",
+    "timestamp": "2025-11-23T09:30:04.285080",
+    "test_set_size": 397,
+    "n_features_original": 25,
+    "n_features_selected": 20
+  },
+  "feature_selection_summary": {
+    "method": "SelectKBest",
+    "n_features_selected": 20,
+    "selected_features": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9",
+      "Social_Responsiveness_Scale",
+      "Qchat_10_Score",
+      "Speech Delay/Language Disorder",
+      "Learning disorder",
+      "Genetic_Disorders",
+      "Depression",
+      "Global developmental delay/intellectual disability",
+      "Social/Behavioural Issues",
+      "Anxiety_disorder",
+      "Sex",
+      "Family_mem_with_ASD"
+    ],
+    "feature_reduction_percent": 20.0
+  },
+  "training_summary": {
+    "n_runs": 10,
+    "validation_auc_mean": 0.9963762344695762,
+    "validation_auc_std": 8.275113844157577e-17
+  },
+  "test_results": {
+    "runs": [
+      {
+        "run_id": 0,
+        "random_state": 42,
+        "n_features_used": 20,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695763,
+          "log_loss": 0.06362439852283934
+        },
+        "test_metrics": {
+          "accuracy": 0.9571788413098237,
+          "precision_macro": 0.9611881033945812,
+          "recall_macro": 0.9541400460005112,
+          "f1_macro": 0.9565961168669972,
+          "roc_auc": 0.9979427549194991,
+          "log_loss": 0.05583767195582436
+        },
+        "generalization_gap": {
+          "auc_gap": -0.0015665204499227814,
+          "accuracy_gap": 0.0019406555455222518
+        }
+      },
+      {
+        "run_id": 1,
+        "random_state": 43,
+        "n_features_used": 20,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695763,
+          "log_loss": 0.06362253137498927
+        },
+        "test_metrics": {
+          "accuracy": 0.9571788413098237,
+          "precision_macro": 0.9611881033945812,
+          "recall_macro": 0.9541400460005112,
+          "f1_macro": 0.9565961168669972,
+          "roc_auc": 0.9978660874009712,
+          "log_loss": 0.058317559224389366
+        },
+        "generalization_gap": {
+          "auc_gap": -0.0014898529313948083,
+          "accuracy_gap": 0.0019406555455222518
+        }
+      },
+      {
+        "run_id": 2,
+        "random_state": 44,
+        "n_features_used": 20,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695762,
+          "log_loss": 0.0637255042168475
+        },
+        "test_metrics": {
+          "accuracy": 0.9571788413098237,
+          "precision_macro": 0.9611881033945812,
+          "recall_macro": 0.9541400460005112,
+          "f1_macro": 0.9565961168669972,
+          "roc_auc": 0.9979171990799897,
+          "log_loss": 0.05597114291466771
+        },
+        "generalization_gap": {
+          "auc_gap": -0.00154096461041342,
+          "accuracy_gap": 0.0019406555455222518
+        }
+      },
+      {
+        "run_id": 3,
+        "random_state": 45,
+        "n_features_used": 20,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695763,
+          "log_loss": 0.06338008747435887
+        },
+        "test_metrics": {
+          "accuracy": 0.9571788413098237,
+          "precision_macro": 0.9611881033945812,
+          "recall_macro": 0.9541400460005112,
+          "f1_macro": 0.9565961168669972,
+          "roc_auc": 0.9978916432404805,
+          "log_loss": 0.05631800836792046
+        },
+        "generalization_gap": {
+          "auc_gap": -0.0015154087709041697,
+          "accuracy_gap": 0.0019406555455222518
+        }
+      },
+      {
+        "run_id": 4,
+        "random_state": 46,
+        "n_features_used": 20,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695762,
+          "log_loss": 0.06349841111094279
+        },
+        "test_metrics": {
+          "accuracy": 0.9571788413098237,
+          "precision_macro": 0.9611881033945812,
+          "recall_macro": 0.9541400460005112,
+          "f1_macro": 0.9565961168669972,
+          "roc_auc": 0.9978916432404804,
+          "log_loss": 0.057049546999550275
+        },
+        "generalization_gap": {
+          "auc_gap": -0.0015154087709041697,
+          "accuracy_gap": 0.0019406555455222518
+        }
+      },
+      {
+        "run_id": 5,
+        "random_state": 47,
+        "n_features_used": 20,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695762,
+          "log_loss": 0.06338972040794033
+        },
+        "test_metrics": {
+          "accuracy": 0.9571788413098237,
+          "precision_macro": 0.9611881033945812,
+          "recall_macro": 0.9541400460005112,
+          "f1_macro": 0.9565961168669972,
+          "roc_auc": 0.9979171990799898,
+          "log_loss": 0.05624174358131677
+        },
+        "generalization_gap": {
+          "auc_gap": -0.001540964610413531,
+          "accuracy_gap": 0.0019406555455222518
+        }
+      },
+      {
+        "run_id": 6,
+        "random_state": 48,
+        "n_features_used": 20,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695762,
+          "log_loss": 0.06326554453693753
+        },
+        "test_metrics": {
+          "accuracy": 0.9571788413098237,
+          "precision_macro": 0.9611881033945812,
+          "recall_macro": 0.9541400460005112,
+          "f1_macro": 0.9565961168669972,
+          "roc_auc": 0.9978660874009713,
+          "log_loss": 0.0567686576128688
+        },
+        "generalization_gap": {
+          "auc_gap": -0.0014898529313950304,
+          "accuracy_gap": 0.0019406555455222518
+        }
+      },
+      {
+        "run_id": 7,
+        "random_state": 49,
+        "n_features_used": 20,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695763,
+          "log_loss": 0.06369199343137537
+        },
+        "test_metrics": {
+          "accuracy": 0.9571788413098237,
+          "precision_macro": 0.9611881033945812,
+          "recall_macro": 0.9541400460005112,
+          "f1_macro": 0.9565961168669972,
+          "roc_auc": 0.9979171990799898,
+          "log_loss": 0.055709094750581056
+        },
+        "generalization_gap": {
+          "auc_gap": -0.00154096461041342,
+          "accuracy_gap": 0.0019406555455222518
+        }
+      },
+      {
+        "run_id": 8,
+        "random_state": 50,
+        "n_features_used": 20,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695762,
+          "log_loss": 0.06324918554129957
+        },
+        "test_metrics": {
+          "accuracy": 0.9571788413098237,
+          "precision_macro": 0.9611881033945812,
+          "recall_macro": 0.9541400460005112,
+          "f1_macro": 0.9565961168669972,
+          "roc_auc": 0.9979171990799898,
+          "log_loss": 0.056398690113922456
+        },
+        "generalization_gap": {
+          "auc_gap": -0.001540964610413531,
+          "accuracy_gap": 0.0019406555455222518
+        }
+      },
+      {
+        "run_id": 9,
+        "random_state": 51,
+        "n_features_used": 20,
+        "validation_metrics": {
+          "accuracy": 0.9591194968553459,
+          "precision_macro": 0.9648648648648649,
+          "recall_macro": 0.9554794520547945,
+          "f1_macro": 0.9584952260474082,
+          "roc_auc": 0.9963762344695763,
+          "log_loss": 0.0635647180874537
+        },
+        "test_metrics": {
+          "accuracy": 0.9571788413098237,
+          "precision_macro": 0.9611881033945812,
+          "recall_macro": 0.9541400460005112,
+          "f1_macro": 0.9565961168669972,
+          "roc_auc": 0.9978916432404804,
+          "log_loss": 0.05700800856223434
+        },
+        "generalization_gap": {
+          "auc_gap": -0.0015154087709040587,
+          "accuracy_gap": 0.0019406555455222518
+        }
+      }
+    ],
+    "statistics": {
+      "mean_test_auc": 0.9979018655762841,
+      "std_test_auc": 2.468928655962083e-05,
+      "min_test_auc": 0.9978660874009712,
+      "max_test_auc": 0.9979427549194991,
+      "median_test_auc": 0.997904421160235,
+      "ci_95_lower": 0.9978660874009712,
+      "ci_95_upper": 0.9979370048556095,
+      "best_run_index": 0,
+      "all_metrics_summary": {
+        "accuracy": {
+          "mean": 0.9571788413098238,
+          "std": 1.1702778228589004e-16
+        },
+        "precision_macro": {
+          "mean": 0.9611881033945812,
+          "std": 0.0
+        },
+        "recall_macro": {
+          "mean": 0.954140046000511,
+          "std": 1.1702778228589004e-16
+        },
+        "f1_macro": {
+          "mean": 0.9565961168669972,
+          "std": 0.0
+        },
+        "log_loss": {
+          "mean": 0.056562012408327554,
+          "std": 0.0007710957612088819
+        }
+      }
+    }
+  },
+  "overfitting_analysis": {
+    "threshold": 0.03,
+    "overall_gap": -0.001525631106707892,
+    "overall_status": "GOOD_GENERALIZATION",
+    "n_overfitting_runs": 0,
+    "overfitting_runs": []
+  },
+  "best_performance": {
+    "run_id": 0,
+    "random_state": 42,
+    "n_features_used": 20,
+    "test_auc": 0.9979427549194991,
+    "all_test_metrics": {
+      "accuracy": 0.9571788413098237,
+      "precision_macro": 0.9611881033945812,
+      "recall_macro": 0.9541400460005112,
+      "f1_macro": 0.9565961168669972,
+      "roc_auc": 0.9979427549194991,
+      "log_loss": 0.05583767195582436
+    },
+    "validation_auc": 0.9963762344695763,
+    "generalization_gap": -0.0015665204499227814
+  }
+}

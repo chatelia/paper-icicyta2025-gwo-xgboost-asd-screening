@@ -1,0 +1,703 @@
+{
+  "metadata": {
+    "experiment_name": "GWO-XGBoost Feature Importance Analysis",
+    "timestamp": "2025-11-23T10:14:23.640870",
+    "n_runs": 10,
+    "xgboost_config": {
+      "objective": "binary:logistic",
+      "eval_metric": "auc",
+      "n_estimators": 500,
+      "max_depth": 8,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "tree_method": "hist",
+      "random_state": 42
+    }
+  },
+  "importance_by_run": [
+    {
+      "run_id": 0,
+      "n_features": 8,
+      "selected_features": [
+        "A1",
+        "A4",
+        "A6",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Learning disorder",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "feature_importance": {
+        "A1": 0.07473763751990405,
+        "A4": 0.08870494352338737,
+        "A6": 0.21686135699357068,
+        "Age_Years": 0.011629770902170464,
+        "Qchat_10_Score": 0.14435116672320716,
+        "Learning disorder": 0.10182558624636666,
+        "Sex": 0.32210803425654283,
+        "Family_mem_with_ASD": 0.039781503834850816
+      },
+      "validation_auc": 0.9963961452691941,
+      "test_auc": 0.9941349348326093
+    },
+    {
+      "run_id": 1,
+      "n_features": 10,
+      "selected_features": [
+        "A1",
+        "A5",
+        "A6",
+        "A7",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Social/Behavioural Issues",
+        "Childhood Autism Rating Scale",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "feature_importance": {
+        "A1": 0.040324670560929886,
+        "A5": 0.15337538790818708,
+        "A6": 0.16498040984849532,
+        "A7": 0.10576459984585462,
+        "Age_Years": 0.008071531661604273,
+        "Qchat_10_Score": 0.11904833888201802,
+        "Social/Behavioural Issues": 0.1020480420535098,
+        "Childhood Autism Rating Scale": 0.02379501873223716,
+        "Sex": 0.24321248698057876,
+        "Family_mem_with_ASD": 0.039379513526585086
+      },
+      "validation_auc": 0.9963961452691941,
+      "test_auc": 0.9980960899565551
+    },
+    {
+      "run_id": 2,
+      "n_features": 8,
+      "selected_features": [
+        "A1",
+        "A4",
+        "A8",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Global developmental delay/intellectual disability",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "feature_importance": {
+        "A1": 0.1169750351392275,
+        "A4": 0.16072011808141914,
+        "A8": 0.0798724278034027,
+        "Age_Years": 0.01195370147048475,
+        "Qchat_10_Score": 0.1379214659142963,
+        "Global developmental delay/intellectual disability": 0.11977251105153144,
+        "Sex": 0.3339059092714922,
+        "Family_mem_with_ASD": 0.038878831268145966
+      },
+      "validation_auc": 0.9963961452691941,
+      "test_auc": 0.9962049578328648
+    },
+    {
+      "run_id": 3,
+      "n_features": 13,
+      "selected_features": [
+        "A1",
+        "A2",
+        "A7",
+        "A8",
+        "A9",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Genetic_Disorders",
+        "Global developmental delay/intellectual disability",
+        "Childhood Autism Rating Scale",
+        "Anxiety_disorder",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "feature_importance": {
+        "A1": 0.04031679071578204,
+        "A2": 0.09613800025865478,
+        "A7": 0.06863348773050033,
+        "A8": 0.03684737922469601,
+        "A9": 0.22062650608218057,
+        "Age_Years": 0.005967840343117379,
+        "Qchat_10_Score": 0.09142078514078339,
+        "Genetic_Disorders": 0.06231216939758864,
+        "Global developmental delay/intellectual disability": 0.06677267904271557,
+        "Childhood Autism Rating Scale": 0.008936742533479907,
+        "Anxiety_disorder": 0.06769103091805174,
+        "Sex": 0.19169971861255758,
+        "Family_mem_with_ASD": 0.04263686999989205
+      },
+      "validation_auc": 0.996396145269194,
+      "test_auc": 0.9982238691541017
+    },
+    {
+      "run_id": 4,
+      "n_features": 8,
+      "selected_features": [
+        "A1",
+        "A4",
+        "Social_Responsiveness_Scale",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Genetic_Disorders",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "feature_importance": {
+        "A1": 0.11990770364759068,
+        "A4": 0.18237727380903973,
+        "Social_Responsiveness_Scale": 0.02754871680148606,
+        "Age_Years": 0.013569627553054657,
+        "Qchat_10_Score": 0.14681688956642813,
+        "Genetic_Disorders": 0.12519534121258258,
+        "Sex": 0.328317502476921,
+        "Family_mem_with_ASD": 0.05626694493289719
+      },
+      "validation_auc": 0.996396145269194,
+      "test_auc": 0.9964349603884487
+    },
+    {
+      "run_id": 5,
+      "n_features": 8,
+      "selected_features": [
+        "A1",
+        "A6",
+        "A8",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Social/Behavioural Issues",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "feature_importance": {
+        "A1": 0.08151190053775441,
+        "A6": 0.2685071196805696,
+        "A8": 0.06478433129961775,
+        "Age_Years": 0.011478863111626231,
+        "Qchat_10_Score": 0.13310760383983117,
+        "Social/Behavioural Issues": 0.11122741064912027,
+        "Sex": 0.28872825683840536,
+        "Family_mem_with_ASD": 0.04065451404307523
+      },
+      "validation_auc": 0.996396145269194,
+      "test_auc": 0.9973038589317659
+    },
+    {
+      "run_id": 6,
+      "n_features": 8,
+      "selected_features": [
+        "A6",
+        "A7",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Learning disorder",
+        "Social/Behavioural Issues",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "feature_importance": {
+        "A6": 0.1505624904846343,
+        "A7": 0.12402511626285528,
+        "Age_Years": 0.011323085816617753,
+        "Qchat_10_Score": 0.14510984955621184,
+        "Learning disorder": 0.07390370074667785,
+        "Social/Behavioural Issues": 0.12389256233964886,
+        "Sex": 0.3144137570027064,
+        "Family_mem_with_ASD": 0.05676943779064771
+      },
+      "validation_auc": 0.9963563236699586,
+      "test_auc": 0.9978149757219524
+    },
+    {
+      "run_id": 7,
+      "n_features": 8,
+      "selected_features": [
+        "A1",
+        "A5",
+        "A6",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Global developmental delay/intellectual disability",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "feature_importance": {
+        "A1": 0.07394574436205903,
+        "A5": 0.12038555611841321,
+        "A6": 0.19046275867597104,
+        "Age_Years": 0.012987914753869463,
+        "Qchat_10_Score": 0.14050780666198404,
+        "Global developmental delay/intellectual disability": 0.1238666161338713,
+        "Sex": 0.30392943089160024,
+        "Family_mem_with_ASD": 0.033914172402231706
+      },
+      "validation_auc": 0.996396145269194,
+      "test_auc": 0.9976871965244059
+    },
+    {
+      "run_id": 8,
+      "n_features": 8,
+      "selected_features": [
+        "A3",
+        "A7",
+        "A9",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Depression",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "feature_importance": {
+        "A3": 0.05079533257967514,
+        "A7": 0.1368478867177208,
+        "A9": 0.29539485599929693,
+        "Age_Years": 0.011049117964956428,
+        "Qchat_10_Score": 0.11413353380672456,
+        "Depression": 0.11561849488011855,
+        "Sex": 0.23297168682851568,
+        "Family_mem_with_ASD": 0.04318909122299187
+      },
+      "validation_auc": 0.996396145269194,
+      "test_auc": 0.9977255302836698
+    },
+    {
+      "run_id": 9,
+      "n_features": 15,
+      "selected_features": [
+        "A1",
+        "A2",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "Social_Responsiveness_Scale",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Genetic_Disorders",
+        "Childhood Autism Rating Scale",
+        "Sex",
+        "Jaundice",
+        "Family_mem_with_ASD"
+      ],
+      "feature_importance": {
+        "A1": 0.04915418628832382,
+        "A2": 0.046852307975920035,
+        "A4": 0.056061687812605634,
+        "A5": 0.14992378724501165,
+        "A6": 0.10835650096060045,
+        "A7": 0.12142937094979986,
+        "A8": 0.038645920663095884,
+        "Social_Responsiveness_Scale": 0.00838935990254545,
+        "Age_Years": 0.005199645430217834,
+        "Qchat_10_Score": 0.09182447651811922,
+        "Genetic_Disorders": 0.09196586656730463,
+        "Childhood Autism Rating Scale": 0.01968510763372639,
+        "Sex": 0.17516040520646603,
+        "Jaundice": 0.006945310696312362,
+        "Family_mem_with_ASD": 0.03040606614995076
+      },
+      "validation_auc": 0.996396145269194,
+      "test_auc": 0.9987094301047789
+    }
+  ],
+  "feature_statistics": {
+    "Sex": {
+      "mean_importance": 0.2734447188365786,
+      "std_importance": 0.05547086444466707,
+      "min_importance": 0.17516040520646603,
+      "max_importance": 0.3339059092714922,
+      "selection_frequency": 1.0,
+      "n_times_selected": 10
+    },
+    "A9": {
+      "mean_importance": 0.25801068104073877,
+      "std_importance": 0.03738417495855818,
+      "min_importance": 0.22062650608218057,
+      "max_importance": 0.29539485599929693,
+      "selection_frequency": 0.2,
+      "n_times_selected": 2
+    },
+    "A6": {
+      "mean_importance": 0.18328843944064024,
+      "std_importance": 0.050763835878073774,
+      "min_importance": 0.10835650096060045,
+      "max_importance": 0.2685071196805696,
+      "selection_frequency": 0.6,
+      "n_times_selected": 6
+    },
+    "A5": {
+      "mean_importance": 0.14122824375720397,
+      "std_importance": 0.014805215472723553,
+      "min_importance": 0.12038555611841321,
+      "max_importance": 0.15337538790818708,
+      "selection_frequency": 0.3,
+      "n_times_selected": 3
+    },
+    "Qchat_10_Score": {
+      "mean_importance": 0.1264241916609604,
+      "std_importance": 0.02022235923308569,
+      "min_importance": 0.09142078514078339,
+      "max_importance": 0.14681688956642813,
+      "selection_frequency": 1.0,
+      "n_times_selected": 10
+    },
+    "A4": {
+      "mean_importance": 0.12196600580661297,
+      "std_importance": 0.05148077290196109,
+      "min_importance": 0.056061687812605634,
+      "max_importance": 0.18237727380903973,
+      "selection_frequency": 0.4,
+      "n_times_selected": 4
+    },
+    "Depression": {
+      "mean_importance": 0.11561849488011855,
+      "std_importance": 0.0,
+      "min_importance": 0.11561849488011855,
+      "max_importance": 0.11561849488011855,
+      "selection_frequency": 0.1,
+      "n_times_selected": 1
+    },
+    "Social/Behavioural Issues": {
+      "mean_importance": 0.11238933834742632,
+      "std_importance": 0.0089557550813226,
+      "min_importance": 0.1020480420535098,
+      "max_importance": 0.12389256233964886,
+      "selection_frequency": 0.3,
+      "n_times_selected": 3
+    },
+    "A7": {
+      "mean_importance": 0.11134009230134619,
+      "std_importance": 0.023529943232528504,
+      "min_importance": 0.06863348773050033,
+      "max_importance": 0.1368478867177208,
+      "selection_frequency": 0.5,
+      "n_times_selected": 5
+    },
+    "Global developmental delay/intellectual disability": {
+      "mean_importance": 0.10347060207603943,
+      "std_importance": 0.026003122765367138,
+      "min_importance": 0.06677267904271557,
+      "max_importance": 0.1238666161338713,
+      "selection_frequency": 0.3,
+      "n_times_selected": 3
+    },
+    "Genetic_Disorders": {
+      "mean_importance": 0.09315779239249196,
+      "std_importance": 0.025685778682091424,
+      "min_importance": 0.06231216939758864,
+      "max_importance": 0.12519534121258258,
+      "selection_frequency": 0.3,
+      "n_times_selected": 3
+    },
+    "Learning disorder": {
+      "mean_importance": 0.08786464349652226,
+      "std_importance": 0.013960942749844406,
+      "min_importance": 0.07390370074667785,
+      "max_importance": 0.10182558624636666,
+      "selection_frequency": 0.2,
+      "n_times_selected": 2
+    },
+    "A1": {
+      "mean_importance": 0.07460920859644643,
+      "std_importance": 0.029356171370950167,
+      "min_importance": 0.04031679071578204,
+      "max_importance": 0.11990770364759068,
+      "selection_frequency": 0.8,
+      "n_times_selected": 8
+    },
+    "A2": {
+      "mean_importance": 0.07149515411728741,
+      "std_importance": 0.024642846141367372,
+      "min_importance": 0.046852307975920035,
+      "max_importance": 0.09613800025865478,
+      "selection_frequency": 0.2,
+      "n_times_selected": 2
+    },
+    "Anxiety_disorder": {
+      "mean_importance": 0.06769103091805174,
+      "std_importance": 0.0,
+      "min_importance": 0.06769103091805174,
+      "max_importance": 0.06769103091805174,
+      "selection_frequency": 0.1,
+      "n_times_selected": 1
+    },
+    "A8": {
+      "mean_importance": 0.05503751474770308,
+      "std_importance": 0.018106205609960985,
+      "min_importance": 0.03684737922469601,
+      "max_importance": 0.0798724278034027,
+      "selection_frequency": 0.4,
+      "n_times_selected": 4
+    },
+    "A3": {
+      "mean_importance": 0.05079533257967514,
+      "std_importance": 0.0,
+      "min_importance": 0.05079533257967514,
+      "max_importance": 0.05079533257967514,
+      "selection_frequency": 0.1,
+      "n_times_selected": 1
+    },
+    "Family_mem_with_ASD": {
+      "mean_importance": 0.04218769451712684,
+      "std_importance": 0.008039215575857907,
+      "min_importance": 0.03040606614995076,
+      "max_importance": 0.05676943779064771,
+      "selection_frequency": 1.0,
+      "n_times_selected": 10
+    },
+    "Social_Responsiveness_Scale": {
+      "mean_importance": 0.017969038352015756,
+      "std_importance": 0.009579678449470304,
+      "min_importance": 0.00838935990254545,
+      "max_importance": 0.02754871680148606,
+      "selection_frequency": 0.2,
+      "n_times_selected": 2
+    },
+    "Childhood Autism Rating Scale": {
+      "mean_importance": 0.01747228963314782,
+      "std_importance": 0.006264424183562417,
+      "min_importance": 0.008936742533479907,
+      "max_importance": 0.02379501873223716,
+      "selection_frequency": 0.3,
+      "n_times_selected": 3
+    },
+    "Age_Years": {
+      "mean_importance": 0.010323109900771923,
+      "std_importance": 0.002741494561463846,
+      "min_importance": 0.005199645430217834,
+      "max_importance": 0.013569627553054657,
+      "selection_frequency": 1.0,
+      "n_times_selected": 10
+    },
+    "Jaundice": {
+      "mean_importance": 0.006945310696312362,
+      "std_importance": 0.0,
+      "min_importance": 0.006945310696312362,
+      "max_importance": 0.006945310696312362,
+      "selection_frequency": 0.1,
+      "n_times_selected": 1
+    }
+  },
+  "aggregate_statistics": {
+    "core_features": {
+      "count": 4,
+      "mean_importance": 0.11309492872885943,
+      "total_importance": 0.4523797149154377,
+      "features": [
+        "Family_mem_with_ASD",
+        "Sex",
+        "Qchat_10_Score",
+        "Age_Years"
+      ]
+    },
+    "stable_features": {
+      "count": 1,
+      "mean_importance": 0.07460920859644643,
+      "total_importance": 0.07460920859644643,
+      "features": [
+        "A1"
+      ]
+    },
+    "frequent_features": {
+      "count": 2,
+      "mean_importance": 0.14731426587099322,
+      "total_importance": 0.29462853174198644
+    },
+    "occasional_features": {
+      "count": 15,
+      "mean_importance": 0.08807409818942318,
+      "total_importance": 1.3211114728413476
+    }
+  },
+  "categorized_features": {
+    "core_100_percent": {
+      "Family_mem_with_ASD": {
+        "mean_importance": 0.04218769451712684,
+        "std_importance": 0.008039215575857907,
+        "min_importance": 0.03040606614995076,
+        "max_importance": 0.05676943779064771,
+        "selection_frequency": 1.0,
+        "n_times_selected": 10
+      },
+      "Sex": {
+        "mean_importance": 0.2734447188365786,
+        "std_importance": 0.05547086444466707,
+        "min_importance": 0.17516040520646603,
+        "max_importance": 0.3339059092714922,
+        "selection_frequency": 1.0,
+        "n_times_selected": 10
+      },
+      "Qchat_10_Score": {
+        "mean_importance": 0.1264241916609604,
+        "std_importance": 0.02022235923308569,
+        "min_importance": 0.09142078514078339,
+        "max_importance": 0.14681688956642813,
+        "selection_frequency": 1.0,
+        "n_times_selected": 10
+      },
+      "Age_Years": {
+        "mean_importance": 0.010323109900771923,
+        "std_importance": 0.002741494561463846,
+        "min_importance": 0.005199645430217834,
+        "max_importance": 0.013569627553054657,
+        "selection_frequency": 1.0,
+        "n_times_selected": 10
+      }
+    },
+    "stable_80_percent": {
+      "A1": {
+        "mean_importance": 0.07460920859644643,
+        "std_importance": 0.029356171370950167,
+        "min_importance": 0.04031679071578204,
+        "max_importance": 0.11990770364759068,
+        "selection_frequency": 0.8,
+        "n_times_selected": 8
+      }
+    },
+    "frequent_50_percent": {
+      "A6": {
+        "mean_importance": 0.18328843944064024,
+        "std_importance": 0.050763835878073774,
+        "min_importance": 0.10835650096060045,
+        "max_importance": 0.2685071196805696,
+        "selection_frequency": 0.6,
+        "n_times_selected": 6
+      },
+      "A7": {
+        "mean_importance": 0.11134009230134619,
+        "std_importance": 0.023529943232528504,
+        "min_importance": 0.06863348773050033,
+        "max_importance": 0.1368478867177208,
+        "selection_frequency": 0.5,
+        "n_times_selected": 5
+      }
+    },
+    "occasional_below_50": {
+      "Global developmental delay/intellectual disability": {
+        "mean_importance": 0.10347060207603943,
+        "std_importance": 0.026003122765367138,
+        "min_importance": 0.06677267904271557,
+        "max_importance": 0.1238666161338713,
+        "selection_frequency": 0.3,
+        "n_times_selected": 3
+      },
+      "A9": {
+        "mean_importance": 0.25801068104073877,
+        "std_importance": 0.03738417495855818,
+        "min_importance": 0.22062650608218057,
+        "max_importance": 0.29539485599929693,
+        "selection_frequency": 0.2,
+        "n_times_selected": 2
+      },
+      "A8": {
+        "mean_importance": 0.05503751474770308,
+        "std_importance": 0.018106205609960985,
+        "min_importance": 0.03684737922469601,
+        "max_importance": 0.0798724278034027,
+        "selection_frequency": 0.4,
+        "n_times_selected": 4
+      },
+      "A2": {
+        "mean_importance": 0.07149515411728741,
+        "std_importance": 0.024642846141367372,
+        "min_importance": 0.046852307975920035,
+        "max_importance": 0.09613800025865478,
+        "selection_frequency": 0.2,
+        "n_times_selected": 2
+      },
+      "Genetic_Disorders": {
+        "mean_importance": 0.09315779239249196,
+        "std_importance": 0.025685778682091424,
+        "min_importance": 0.06231216939758864,
+        "max_importance": 0.12519534121258258,
+        "selection_frequency": 0.3,
+        "n_times_selected": 3
+      },
+      "Depression": {
+        "mean_importance": 0.11561849488011855,
+        "std_importance": 0.0,
+        "min_importance": 0.11561849488011855,
+        "max_importance": 0.11561849488011855,
+        "selection_frequency": 0.1,
+        "n_times_selected": 1
+      },
+      "Anxiety_disorder": {
+        "mean_importance": 0.06769103091805174,
+        "std_importance": 0.0,
+        "min_importance": 0.06769103091805174,
+        "max_importance": 0.06769103091805174,
+        "selection_frequency": 0.1,
+        "n_times_selected": 1
+      },
+      "A3": {
+        "mean_importance": 0.05079533257967514,
+        "std_importance": 0.0,
+        "min_importance": 0.05079533257967514,
+        "max_importance": 0.05079533257967514,
+        "selection_frequency": 0.1,
+        "n_times_selected": 1
+      },
+      "Childhood Autism Rating Scale": {
+        "mean_importance": 0.01747228963314782,
+        "std_importance": 0.006264424183562417,
+        "min_importance": 0.008936742533479907,
+        "max_importance": 0.02379501873223716,
+        "selection_frequency": 0.3,
+        "n_times_selected": 3
+      },
+      "Social/Behavioural Issues": {
+        "mean_importance": 0.11238933834742632,
+        "std_importance": 0.0089557550813226,
+        "min_importance": 0.1020480420535098,
+        "max_importance": 0.12389256233964886,
+        "selection_frequency": 0.3,
+        "n_times_selected": 3
+      },
+      "A4": {
+        "mean_importance": 0.12196600580661297,
+        "std_importance": 0.05148077290196109,
+        "min_importance": 0.056061687812605634,
+        "max_importance": 0.18237727380903973,
+        "selection_frequency": 0.4,
+        "n_times_selected": 4
+      },
+      "Social_Responsiveness_Scale": {
+        "mean_importance": 0.017969038352015756,
+        "std_importance": 0.009579678449470304,
+        "min_importance": 0.00838935990254545,
+        "max_importance": 0.02754871680148606,
+        "selection_frequency": 0.2,
+        "n_times_selected": 2
+      },
+      "A5": {
+        "mean_importance": 0.14122824375720397,
+        "std_importance": 0.014805215472723553,
+        "min_importance": 0.12038555611841321,
+        "max_importance": 0.15337538790818708,
+        "selection_frequency": 0.3,
+        "n_times_selected": 3
+      },
+      "Jaundice": {
+        "mean_importance": 0.006945310696312362,
+        "std_importance": 0.0,
+        "min_importance": 0.006945310696312362,
+        "max_importance": 0.006945310696312362,
+        "selection_frequency": 0.1,
+        "n_times_selected": 1
+      },
+      "Learning disorder": {
+        "mean_importance": 0.08786464349652226,
+        "std_importance": 0.013960942749844406,
+        "min_importance": 0.07390370074667785,
+        "max_importance": 0.10182558624636666,
+        "selection_frequency": 0.2,
+        "n_times_selected": 2
+      }
+    }
+  }
+}

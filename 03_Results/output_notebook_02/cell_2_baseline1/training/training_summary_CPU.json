@@ -1,0 +1,19 @@
+{
+  "experiment": "Baseline 1: XGBoost with All Features (CPU)",
+  "n_features": 25,
+  "n_runs": 10,
+  "compute_backend": "CPU",
+  "validation_auc": {
+    "mean": 0.9963961452691941,
+    "std": 1.3343220141622404e-16,
+    "range": [
+      0.9963961452691938,
+      0.996396145269194
+    ]
+  },
+  "best_run": {
+    "run_id": 1,
+    "validation_auc": 0.996396145269194
+  },
+  "training_time_total_minutes": 0.06
+}

@@ -1,0 +1,237 @@
+{
+  "experiment_info": {
+    "cell_name": "Cell 7: Feature Stability & Baseline Alignment",
+    "timestamp": "2025-11-23T10:14:12.135239",
+    "stable_threshold": 0.8,
+    "core_threshold": 1.0
+  },
+  "gwo_feature_stability": {
+    "n_runs": 10,
+    "selection_frequency": {
+      "Age_Years": 1.0,
+      "Qchat_10_Score": 1.0,
+      "Sex": 1.0,
+      "Family_mem_with_ASD": 1.0,
+      "A1": 0.8,
+      "A6": 0.6,
+      "A7": 0.5,
+      "A4": 0.4,
+      "A8": 0.4,
+      "A5": 0.3,
+      "Social/Behavioural Issues": 0.3,
+      "Childhood Autism Rating Scale": 0.3,
+      "Global developmental delay/intellectual disability": 0.3,
+      "Genetic_Disorders": 0.3,
+      "Learning disorder": 0.2,
+      "A2": 0.2,
+      "A9": 0.2,
+      "Social_Responsiveness_Scale": 0.2,
+      "Anxiety_disorder": 0.1,
+      "A3": 0.1,
+      "Depression": 0.1,
+      "Jaundice": 0.1
+    },
+    "core_features": [
+      "Age_Years",
+      "Family_mem_with_ASD",
+      "Qchat_10_Score",
+      "Sex"
+    ],
+    "stable_features": [
+      "A1",
+      "Age_Years",
+      "Family_mem_with_ASD",
+      "Qchat_10_Score",
+      "Sex"
+    ],
+    "representative_features": [
+      "A1",
+      "Age_Years",
+      "Family_mem_with_ASD",
+      "Qchat_10_Score",
+      "Sex"
+    ],
+    "statistics": {
+      "n_features_mean": 9.4,
+      "n_features_std": 2.4166091947189146,
+      "n_features_min": 8,
+      "n_features_max": 15,
+      "n_features_range": [
+        8,
+        15
+      ]
+    },
+    "tier_counts": {
+      "core_100percent": 4,
+      "stable_80percent": 5,
+      "total_unique_features": 22
+    }
+  },
+  "baseline_alignment": {
+    "gwo_representative_features": {
+      "features": [
+        "A1",
+        "Age_Years",
+        "Family_mem_with_ASD",
+        "Qchat_10_Score",
+        "Sex"
+      ],
+      "count": 5,
+      "definition": "Stable features with \u226580% selection frequency across 10 runs"
+    },
+    "baseline_2_selectkbest": {
+      "method_info": {
+        "name": "Baseline 2: XGBoost with SelectKBest",
+        "method_type": "deterministic",
+        "n_features": 20
+      },
+      "features": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "Social_Responsiveness_Scale",
+        "Qchat_10_Score",
+        "Speech Delay/Language Disorder",
+        "Learning disorder",
+        "Genetic_Disorders",
+        "Depression",
+        "Global developmental delay/intellectual disability",
+        "Social/Behavioural Issues",
+        "Anxiety_disorder",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "comparison_with_gwo": {
+        "jaccard_similarity": 0.1905,
+        "intersection_count": 4,
+        "union_count": 21,
+        "common_features": [
+          "A1",
+          "Family_mem_with_ASD",
+          "Qchat_10_Score",
+          "Sex"
+        ],
+        "set1_unique": [
+          "Age_Years"
+        ],
+        "set2_unique": [
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9",
+          "Anxiety_disorder",
+          "Depression",
+          "Genetic_Disorders",
+          "Global developmental delay/intellectual disability",
+          "Learning disorder",
+          "Social/Behavioural Issues",
+          "Social_Responsiveness_Scale",
+          "Speech Delay/Language Disorder"
+        ]
+      }
+    },
+    "baseline_3_rfecv": {
+      "method_info": {
+        "name": "Baseline 3: XGBoost with RFECV",
+        "method_type": "stochastic",
+        "n_features_stable": 25,
+        "n_features_mean": 25.0,
+        "n_features_std": 0.0
+      },
+      "features": [
+        "A1",
+        "A10_Autism_Spectrum_Quotient",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "Age_Years",
+        "Anxiety_disorder",
+        "Childhood Autism Rating Scale",
+        "Depression",
+        "Family_mem_with_ASD",
+        "Genetic_Disorders",
+        "Global developmental delay/intellectual disability",
+        "Jaundice",
+        "Learning disorder",
+        "Qchat_10_Score",
+        "Sex",
+        "Social/Behavioural Issues",
+        "Social_Responsiveness_Scale",
+        "Speech Delay/Language Disorder",
+        "Who_completed_the_test"
+      ],
+      "comparison_with_gwo": {
+        "jaccard_similarity": 0.2,
+        "intersection_count": 5,
+        "union_count": 25,
+        "common_features": [
+          "A1",
+          "Age_Years",
+          "Family_mem_with_ASD",
+          "Qchat_10_Score",
+          "Sex"
+        ],
+        "set1_unique": [],
+        "set2_unique": [
+          "A10_Autism_Spectrum_Quotient",
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9",
+          "Anxiety_disorder",
+          "Childhood Autism Rating Scale",
+          "Depression",
+          "Genetic_Disorders",
+          "Global developmental delay/intellectual disability",
+          "Jaundice",
+          "Learning disorder",
+          "Social/Behavioural Issues",
+          "Social_Responsiveness_Scale",
+          "Speech Delay/Language Disorder",
+          "Who_completed_the_test"
+        ]
+      }
+    }
+  },
+  "summary_insights": {
+    "highest_agreement": {
+      "method": "Baseline 3: RFECV",
+      "jaccard_similarity": 0.2
+    },
+    "core_features_validation": {
+      "Age_Years": "Selected by GWO + RFECV",
+      "Family_mem_with_ASD": "Selected by all methods",
+      "Qchat_10_Score": "Selected by all methods",
+      "Sex": "Selected by all methods"
+    },
+    "feature_reduction_effectiveness": {
+      "gwo_features": 5,
+      "vs_selectkbest": "75.0% reduction (20\u21925)",
+      "vs_rfecv": "80.0% reduction (25\u21925)"
+    },
+    "alignment_summary": {
+      "jaccard_vs_selectkbest": 0.1905,
+      "jaccard_vs_rfecv": 0.2,
+      "mean_jaccard": 0.1953
+    }
+  }
+}

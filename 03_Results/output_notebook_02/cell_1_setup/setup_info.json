@@ -1,0 +1,89 @@
+{
+  "timestamp": "2025-11-23T09:00:54.607300",
+  "cell": "Cell 1: Environment Setup & Data Loading",
+  "project_paths": {
+    "root": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project",
+    "dataset": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/01_Dataset",
+    "preprocessed": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/01_Dataset/splits/no_ethnicity/preprocessed",
+    "results": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results",
+    "baseline_results": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/output_notebook_02/cell_1_setup"
+  },
+  "configuration": {
+    "random_state": 42,
+    "cv_folds": 5,
+    "scoring_metric": "roc_auc",
+    "target_column": "ASD_traits",
+    "n_jobs": -1,
+    "n_runs": 10
+  },
+  "xgboost_unified_config": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "n_estimators": 500,
+    "max_depth": 8,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "tree_method": "gpu_hist",
+    "predictor": "gpu_predictor",
+    "random_state": 42,
+    "n_jobs": -1,
+    "verbosity": 0
+  },
+  "xgboost_rfecv_config": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "n_estimators": 150,
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "tree_method": "gpu_hist",
+    "predictor": "gpu_predictor",
+    "random_state": 42,
+    "n_jobs": -1,
+    "verbosity": 0
+  },
+  "selectkbest_config": {
+    "selection_method": "f_classif",
+    "k_values": [
+      8,
+      12,
+      16,
+      20
+    ],
+    "selection_strategy": "statistical_ranking"
+  },
+  "rfecv_config": {
+    "step": 5,
+    "cv_folds": 3,
+    "min_features_to_select": 8,
+    "scoring": "roc_auc",
+    "n_jobs": -1
+  },
+  "data_verification": {
+    "expected_samples": {
+      "train": 1270,
+      "val": 318,
+      "test": 397
+    },
+    "actual_samples": {
+      "train": 1270,
+      "val": 318,
+      "test": 397
+    },
+    "expected_features": 25,
+    "excluded_columns_verified": true,
+    "target_encoding_verified": true,
+    "data_quality_passed": true
+  },
+  "system_info": {
+    "python_version": "3.12.12",
+    "pandas_version": "2.2.2",
+    "numpy_version": "2.0.2",
+    "xgboost_version": "3.1.1",
+    "matplotlib_backend": "Agg",
+    "gpu_available": false
+  },
+  "status": "completed"
+}

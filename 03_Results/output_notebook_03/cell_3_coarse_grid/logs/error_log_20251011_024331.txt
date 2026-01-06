@@ -1,0 +1,26 @@
+================================================================================
+ERROR LOG
+Timestamp: 2025-10-11T02:43:31.461770
+================================================================================
+
+EXPERIMENT CONTEXT:
+{
+  "exp_num": 1,
+  "total": 45,
+  "population_size": 30,
+  "max_iterations": 100,
+  "random_seed": 42
+}
+
+ERROR MESSAGE:
+Error occurred during GWO optimization
+
+EXCEPTION TYPE: TypeError
+EXCEPTION MESSAGE: GreyWolfOptimizer.optimize() got an unexpected keyword argument 'callback'
+
+FULL TRACEBACK:
+Traceback (most recent call last):
+  File "/tmp/ipython-input-3488544527.py", line 316, in run_single_experiment
+    result = gwo.optimize(callback=iteration_callback)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: GreyWolfOptimizer.optimize() got an unexpected keyword argument 'callback'

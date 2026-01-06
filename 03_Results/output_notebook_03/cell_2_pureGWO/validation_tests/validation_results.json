@@ -1,0 +1,46 @@
+{
+  "test_summary": {
+    "total_tests": 7,
+    "passed": 7,
+    "failed": 0,
+    "status": "all_passed"
+  },
+  "tests": [
+    {
+      "test_id": 1,
+      "name": "Binary Conversion",
+      "status": "passed"
+    },
+    {
+      "test_id": 2,
+      "name": "Constraint Enforcement - Too Few",
+      "status": "passed"
+    },
+    {
+      "test_id": 3,
+      "name": "Constraint Enforcement - Too Many",
+      "status": "passed"
+    },
+    {
+      "test_id": 4,
+      "name": "Constraint Enforcement - Within Range",
+      "status": "passed"
+    },
+    {
+      "test_id": 5,
+      "name": "Fitness Function",
+      "status": "passed"
+    },
+    {
+      "test_id": 6,
+      "name": "GWO Initialization",
+      "status": "passed"
+    },
+    {
+      "test_id": 7,
+      "name": "GWO Optimization with Callback",
+      "status": "passed"
+    }
+  ],
+  "timestamp": "2025-10-24T06:22:59.077529"
+}

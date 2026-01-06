@@ -1,0 +1,27 @@
+{
+  "experiment": "Baseline 3: XGBoost with RFECV (CPU)",
+  "feature_selection": {
+    "method": "Wrapper (Recursive Feature Elimination with CV)",
+    "original_features": 25,
+    "mean_features_selected": 25.0,
+    "std_features_selected": 0.0,
+    "reduction_percent": 0.0
+  },
+  "n_runs": 10,
+  "successful_runs": 10,
+  "compute_backend": "CPU",
+  "validation_auc": {
+    "mean": 0.9963961452691941,
+    "std": 1.3343220141622404e-16,
+    "range": [
+      0.9963961452691938,
+      0.996396145269194
+    ]
+  },
+  "best_run": {
+    "run_id": 1,
+    "validation_auc": 0.996396145269194,
+    "features_selected": 25
+  },
+  "training_time_total_minutes": 0.2
+}

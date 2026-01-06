@@ -1,0 +1,16 @@
+{
+  "experiment": "Baseline 1 Testing: XGBoost with All Features",
+  "n_features": 25,
+  "test_set_size": 397,
+  "n_models_tested": 10,
+  "performance": {
+    "validation_auc_mean": 0.9963961452691941,
+    "test_auc_mean": 0.9981446460516228,
+    "generalization_gap": -0.001748500782428719
+  },
+  "best_run": {
+    "run_id": 9,
+    "test_auc": 0.9983005366726297
+  },
+  "overfitting_status": "GOOD_GENERALIZATION"
+}

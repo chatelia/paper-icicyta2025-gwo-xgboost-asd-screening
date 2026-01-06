@@ -1,0 +1,319 @@
+{
+  "experiment_info": {
+    "name": "GWO-XGBoost Testing Phase",
+    "description": "Unbiased evaluation on held-out test set",
+    "timestamp": "2025-10-24T02:37:03.287389",
+    "n_runs": 10,
+    "total_runtime_seconds": 9.802690029144287
+  },
+  "runs": [
+    {
+      "run_id": 0,
+      "random_seed": 0,
+      "n_features": 8,
+      "selected_features": [
+        "A1",
+        "A4",
+        "A6",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Learning disorder",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "validation_auc": 0.9963961452691941,
+      "test_metrics": {
+        "roc_auc": 0.9941349348326093,
+        "accuracy": 0.9521410579345088,
+        "precision_macro": 0.9570554543087737,
+        "recall_macro": 0.9486455405060057,
+        "f1_macro": 0.9514310550207656,
+        "log_loss": 3.3820709127850797
+      }
+    },
+    {
+      "run_id": 1,
+      "random_seed": 1,
+      "n_features": 10,
+      "selected_features": [
+        "A1",
+        "A5",
+        "A6",
+        "A7",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Social/Behavioural Issues",
+        "Childhood Autism Rating Scale",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "validation_auc": 0.9963961452691941,
+      "test_metrics": {
+        "roc_auc": 0.9980960899565551,
+        "accuracy": 0.9596977329974811,
+        "precision_macro": 0.9653679653679654,
+        "recall_macro": 0.956043956043956,
+        "f1_macro": 0.9590742745219318,
+        "log_loss": 3.5160865976213476
+      }
+    },
+    {
+      "run_id": 2,
+      "random_seed": 2,
+      "n_features": 8,
+      "selected_features": [
+        "A1",
+        "A4",
+        "A8",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Global developmental delay/intellectual disability",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "validation_auc": 0.9963961452691941,
+      "test_metrics": {
+        "roc_auc": 0.9962049578328648,
+        "accuracy": 0.9546599496221663,
+        "precision_macro": 0.9591131212310251,
+        "recall_macro": 0.9513927932532584,
+        "f1_macro": 0.954015444015444,
+        "log_loss": 3.2679027387419373
+      }
+    },
+    {
+      "run_id": 3,
+      "random_seed": 3,
+      "n_features": 13,
+      "selected_features": [
+        "A1",
+        "A2",
+        "A7",
+        "A8",
+        "A9",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Genetic_Disorders",
+        "Global developmental delay/intellectual disability",
+        "Childhood Autism Rating Scale",
+        "Anxiety_disorder",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "validation_auc": 0.996396145269194,
+      "test_metrics": {
+        "roc_auc": 0.9982238691541017,
+        "accuracy": 0.9596977329974811,
+        "precision_macro": 0.9653679653679654,
+        "recall_macro": 0.956043956043956,
+        "f1_macro": 0.9590742745219318,
+        "log_loss": 3.3980672073917186
+      }
+    },
+    {
+      "run_id": 4,
+      "random_seed": 4,
+      "n_features": 8,
+      "selected_features": [
+        "A1",
+        "A4",
+        "Social_Responsiveness_Scale",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Genetic_Disorders",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "validation_auc": 0.996396145269194,
+      "test_metrics": {
+        "roc_auc": 0.9964349603884487,
+        "accuracy": 0.9496221662468514,
+        "precision_macro": 0.9550148646534189,
+        "recall_macro": 0.945898287758753,
+        "f1_macro": 0.9488428431524147,
+        "log_loss": 3.3441884376324786
+      }
+    },
+    {
+      "run_id": 5,
+      "random_seed": 5,
+      "n_features": 8,
+      "selected_features": [
+        "A1",
+        "A6",
+        "A8",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Social/Behavioural Issues",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "validation_auc": 0.996396145269194,
+      "test_metrics": {
+        "roc_auc": 0.9973038589317659,
+        "accuracy": 0.9521410579345088,
+        "precision_macro": 0.9570554543087737,
+        "recall_macro": 0.9486455405060057,
+        "f1_macro": 0.9514310550207656,
+        "log_loss": 3.3321310861835127
+      }
+    },
+    {
+      "run_id": 6,
+      "random_seed": 6,
+      "n_features": 8,
+      "selected_features": [
+        "A6",
+        "A7",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Learning disorder",
+        "Social/Behavioural Issues",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "validation_auc": 0.9963563236699586,
+      "test_metrics": {
+        "roc_auc": 0.9978149757219524,
+        "accuracy": 0.9546599496221663,
+        "precision_macro": 0.9601914150106922,
+        "recall_macro": 0.9509711219013545,
+        "f1_macro": 0.9539585588371733,
+        "log_loss": 3.4465603981726582
+      }
+    },
+    {
+      "run_id": 7,
+      "random_seed": 7,
+      "n_features": 8,
+      "selected_features": [
+        "A1",
+        "A5",
+        "A6",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Global developmental delay/intellectual disability",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "validation_auc": 0.996396145269194,
+      "test_metrics": {
+        "roc_auc": 0.9976871965244059,
+        "accuracy": 0.9571788413098237,
+        "precision_macro": 0.9633620689655172,
+        "recall_macro": 0.9532967032967032,
+        "f1_macro": 0.9564886628113134,
+        "log_loss": 3.495661200807802
+      }
+    },
+    {
+      "run_id": 8,
+      "random_seed": 8,
+      "n_features": 8,
+      "selected_features": [
+        "A3",
+        "A7",
+        "A9",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Depression",
+        "Sex",
+        "Family_mem_with_ASD"
+      ],
+      "validation_auc": 0.996396145269194,
+      "test_metrics": {
+        "roc_auc": 0.9977255302836698,
+        "accuracy": 0.9546599496221663,
+        "precision_macro": 0.9613733905579399,
+        "recall_macro": 0.9505494505494505,
+        "f1_macro": 0.9538991535920727,
+        "log_loss": 3.36191622727518
+      }
+    },
+    {
+      "run_id": 9,
+      "random_seed": 9,
+      "n_features": 15,
+      "selected_features": [
+        "A1",
+        "A2",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "Social_Responsiveness_Scale",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Genetic_Disorders",
+        "Childhood Autism Rating Scale",
+        "Sex",
+        "Jaundice",
+        "Family_mem_with_ASD"
+      ],
+      "validation_auc": 0.996396145269194,
+      "test_metrics": {
+        "roc_auc": 0.9987094301047789,
+        "accuracy": 0.9622166246851386,
+        "precision_macro": 0.9673913043478262,
+        "recall_macro": 0.9587912087912087,
+        "f1_macro": 0.9616560960690255,
+        "log_loss": 3.2527519485897316
+      }
+    }
+  ],
+  "statistics": {
+    "test_auc_mean": 0.9972335803731152,
+    "test_auc_std": 0.0012645525466466064,
+    "test_auc_min": 0.9941349348326093,
+    "test_auc_max": 0.9987094301047789,
+    "test_auc_ci_lower": 0.9946006900076668,
+    "test_auc_ci_upper": 0.9986001788908765,
+    "test_accuracy_mean": 0.9556675062972293,
+    "test_accuracy_std": 0.0037699318758427722,
+    "test_precision_macro_mean": 0.9611293004119897,
+    "test_precision_macro_std": 0.003946054564121284,
+    "test_recall_macro_mean": 0.952027855865065,
+    "test_recall_macro_std": 0.0037916807739644173,
+    "test_f1_macro_mean": 0.9549871417562839,
+    "test_f1_macro_std": 0.0038258153932628097,
+    "test_log_loss_mean": 3.379733675520145,
+    "test_log_loss_std": 0.08325632211380583,
+    "best_run_index": 9
+  },
+  "consistency_analysis": {
+    "mean_val_test_gap": -0.0008414172638447793,
+    "std_val_test_gap": 0.0012664384233452232,
+    "correlation": -0.15325456433516862
+  },
+  "best_model": {
+    "run_id": 9,
+    "test_auc": 0.9987094301047789,
+    "all_test_metrics": {
+      "roc_auc": 0.9987094301047789,
+      "accuracy": 0.9622166246851386,
+      "precision_macro": 0.9673913043478262,
+      "recall_macro": 0.9587912087912087,
+      "f1_macro": 0.9616560960690255,
+      "log_loss": 3.2527519485897316
+    },
+    "n_features": 15,
+    "selected_features": [
+      "A1",
+      "A2",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "Social_Responsiveness_Scale",
+      "Age_Years",
+      "Qchat_10_Score",
+      "Genetic_Disorders",
+      "Childhood Autism Rating Scale",
+      "Sex",
+      "Jaundice",
+      "Family_mem_with_ASD"
+    ]
+  }
+}

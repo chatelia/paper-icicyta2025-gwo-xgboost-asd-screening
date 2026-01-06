@@ -1,0 +1,1489 @@
+{
+  "timestamp": "2025-10-06T06:29:04.451599",
+  "cell_info": {
+    "cell_number": 2,
+    "cell_name": "Enhanced EDA & Preprocessing Pipeline (Publication-Ready)",
+    "methodology": "Clinical-focused EDA with statistical rigor and IEEE visualization standards",
+    "enhancements": [
+      "Publication-ready clinical analysis",
+      "Statistical significance testing",
+      "Effect size calculations",
+      "Enhanced correlation matrix with clinical grouping",
+      "IEEE conference standard visualizations",
+      "Preprocessed CSV generation for reproducibility"
+    ]
+  },
+  "dataset_info": {
+    "splits_loaded": {
+      "train": [
+        1270,
+        26
+      ],
+      "val": [
+        318,
+        26
+      ],
+      "test": [
+        397,
+        26
+      ]
+    },
+    "ethnicity_removed": true,
+    "preprocessing_completed": true,
+    "clinical_focus": true,
+    "preprocessed_files_saved": {
+      "train": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/01_Dataset/splits/no_ethnicity/preprocessed/train_set_preprocessed.csv",
+      "val": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/01_Dataset/splits/no_ethnicity/preprocessed/val_set_preprocessed.csv",
+      "test": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/01_Dataset/splits/no_ethnicity/preprocessed/test_set_preprocessed.csv"
+    }
+  },
+  "clinical_eda_results": {
+    "dataset_overview": {
+      "total_samples": 1270,
+      "total_features": 25,
+      "memory_usage_mb": 0.851318359375,
+      "data_quality": {
+        "missing_values": 0,
+        "duplicate_rows": 380
+      }
+    },
+    "clinical_target_analysis": {
+      "prevalence_by_split": {
+        "train": {
+          "total_samples": 1270,
+          "asd_count": 687,
+          "non_asd_count": 583,
+          "asd_prevalence": 0.5409448818897638,
+          "balance_ratio": 0.8486171761280932
+        },
+        "val": {
+          "total_samples": 318,
+          "asd_count": 172,
+          "non_asd_count": 146,
+          "asd_prevalence": 0.5408805031446541,
+          "balance_ratio": 0.8488372093023255
+        },
+        "test": {
+          "total_samples": 397,
+          "asd_count": 215,
+          "non_asd_count": 182,
+          "asd_prevalence": 0.5415617128463476,
+          "balance_ratio": 0.8465116279069768
+        }
+      },
+      "age_stratified": {
+        "0-3": {
+          "total": 82,
+          "asd_count": 42,
+          "asd_rate": 0.5121951219512195
+        },
+        "4-6": {
+          "total": 196,
+          "asd_count": 117,
+          "asd_rate": 0.5969387755102041
+        },
+        "7-10": {
+          "total": 464,
+          "asd_count": 241,
+          "asd_rate": 0.5193965517241379
+        },
+        "11-15": {
+          "total": 465,
+          "asd_count": 249,
+          "asd_rate": 0.535483870967742
+        },
+        "16-18": {
+          "total": 63,
+          "asd_count": 38,
+          "asd_rate": 0.6031746031746031
+        }
+      }
+    },
+    "behavioral_features_analysis": {
+      "features_analyzed": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ],
+      "individual_statistics": {
+        "A1": {
+          "asd_mean": 0.48034934497816595,
+          "non_asd_mean": 0.08061749571183534,
+          "asd_std": 0.49997771984937234,
+          "non_asd_std": 0.27248057940678105,
+          "cohens_d": 0.9714416341159045,
+          "statistical_test": {
+            "test": "chi_square",
+            "statistic": 239.50899109066523,
+            "p_value": 5.032315144717475e-54,
+            "significant": "True"
+          }
+        },
+        "A2": {
+          "asd_mean": 0.40465793304221254,
+          "non_asd_mean": 0.036020583190394515,
+          "asd_std": 0.49118333732555963,
+          "non_asd_std": 0.18650137388824398,
+          "cohens_d": 0.9631548470506167,
+          "statistical_test": {
+            "test": "chi_square",
+            "statistic": 236.04433542736672,
+            "p_value": 2.8658027550915684e-53,
+            "significant": "True"
+          }
+        },
+        "A3": {
+          "asd_mean": 0.3653566229985444,
+          "non_asd_mean": 0.032590051457975985,
+          "asd_std": 0.4818808624935821,
+          "non_asd_std": 0.17771356651128747,
+          "cohens_d": 0.8889648654557392,
+          "statistical_test": {
+            "test": "chi_square",
+            "statistic": 206.6314546761177,
+            "p_value": 7.461302148965855e-47,
+            "significant": "True"
+          }
+        },
+        "A4": {
+          "asd_mean": 0.4759825327510917,
+          "non_asd_mean": 0.051457975986277875,
+          "asd_std": 0.4997867063868746,
+          "non_asd_std": 0.22111969329662506,
+          "cohens_d": 1.0694336962820608,
+          "statistical_test": {
+            "test": "chi_square",
+            "statistic": 279.15520985009397,
+            "p_value": 1.1473383850511503e-62,
+            "significant": "True"
+          }
+        },
+        "A5": {
+          "asd_mean": 0.47307132459970885,
+          "non_asd_mean": 0.036020583190394515,
+          "asd_std": 0.4996380898739682,
+          "non_asd_std": 0.18650137388824367,
+          "cohens_d": 1.1246369016638245,
+          "statistical_test": {
+            "test": "chi_square",
+            "statistic": 301.7088598348149,
+            "p_value": 1.397886252733826e-67,
+            "significant": "True"
+          }
+        },
+        "A6": {
+          "asd_mean": 0.5138282387190685,
+          "non_asd_mean": 0.05317324185248713,
+          "asd_std": 0.5001729026588535,
+          "non_asd_std": 0.2245714877209569,
+          "cohens_d": 1.1570963262243974,
+          "statistical_test": {
+            "test": "chi_square",
+            "statistic": 315.0801641979144,
+            "p_value": 1.7083372198276e-70,
+            "significant": "True"
+          }
+        },
+        "A7": {
+          "asd_mean": 0.5589519650655022,
+          "non_asd_mean": 0.09433962264150944,
+          "asd_std": 0.4968742609725097,
+          "non_asd_std": 0.2925516395063694,
+          "cohens_d": 1.1175220067862297,
+          "statistical_test": {
+            "test": "chi_square",
+            "statistic": 298.9344228679848,
+            "p_value": 5.6224563420748374e-67,
+            "significant": "True"
+          }
+        },
+        "A8": {
+          "asd_mean": 0.4104803493449782,
+          "non_asd_mean": 0.048027444253859346,
+          "asd_std": 0.49227937368545854,
+          "non_asd_std": 0.21400786654493104,
+          "cohens_d": 0.9292773533409941,
+          "statistical_test": {
+            "test": "chi_square",
+            "statistic": 222.5827766738896,
+            "p_value": 2.4718876648385157e-50,
+            "significant": "True"
+          }
+        },
+        "A9": {
+          "asd_mean": 0.4643377001455604,
+          "non_asd_mean": 0.02058319039451115,
+          "asd_std": 0.4990899497291525,
+          "non_asd_std": 0.1421061611007545,
+          "cohens_d": 1.1692764653723575,
+          "statistical_test": {
+            "test": "chi_square",
+            "statistic": 319.9721329912119,
+            "p_value": 1.468829137605795e-71,
+            "significant": "True"
+          }
+        }
+      },
+      "internal_correlation_mean": 0.5387061178578721,
+      "total_score_stats": {
+        "asd_mean": 4.1470160116448325,
+        "non_asd_mean": 0.4528301886792453,
+        "asd_std": 3.243327166967292,
+        "non_asd_std": 0.867960470488756
+      }
+    },
+    "clinical_assessment_analysis": {
+      "CARS": {
+        "column": "Childhood Autism Rating Scale",
+        "asd_mean": 1.908296943231441,
+        "non_asd_mean": 1.4751286449399656,
+        "asd_std": 1.07666929679913,
+        "non_asd_std": 0.9094665984692999,
+        "statistical_test": {
+          "test": "t_test",
+          "statistic": 7.666508183601111,
+          "p_value": 3.4999924245916694e-14,
+          "significant": "True"
+        },
+        "score_range": {
+          "min": 1,
+          "max": 4,
+          "unique_values": 4
+        }
+      },
+      "SRS": {
+        "column": "Social_Responsiveness_Scale",
+        "asd_mean": 4.075691411935954,
+        "non_asd_mean": 1.9588336192109777,
+        "asd_std": 3.8214646282066496,
+        "non_asd_std": 3.167980919224792,
+        "statistical_test": {
+          "test": "t_test",
+          "statistic": 10.629752558763654,
+          "p_value": 2.4355230126092346e-25,
+          "significant": "True"
+        },
+        "score_range": {
+          "min": 0.0,
+          "max": 10.0,
+          "unique_values": 11
+        }
+      },
+      "AQ10": {
+        "column": "Qchat_10_Score",
+        "asd_mean": 5.326055312954876,
+        "non_asd_mean": 2.830188679245283,
+        "asd_std": 2.8696063895167327,
+        "non_asd_std": 2.169845149132032,
+        "statistical_test": {
+          "test": "t_test",
+          "statistic": 17.23188343728771,
+          "p_value": 5.973360574280002e-60,
+          "significant": "True"
+        },
+        "score_range": {
+          "min": 0.0,
+          "max": 10.0,
+          "unique_values": 11
+        }
+      }
+    },
+    "demographic_analysis": {
+      "gender": {
+        "column": "Sex",
+        "crosstab": {
+          "0": {
+            "F": 282,
+            "M": 301
+          },
+          "1": {
+            "F": 68,
+            "M": 619
+          }
+        },
+        "statistical_test": {
+          "test": "chi_square",
+          "statistic": 231.89140105997961,
+          "p_value": 2.3060394736550904e-52,
+          "significant": "True"
+        }
+      }
+    },
+    "statistical_tests": {}
+  },
+  "redundancy_analysis": {
+    "correlation_analysis": {
+      "threshold": 0.95,
+      "high_corr_pairs": [
+        {
+          "feature1": "Speech Delay/Language Disorder",
+          "feature2": "Learning disorder",
+          "correlation": 0.9765126185610347
+        },
+        {
+          "feature1": "Speech Delay/Language Disorder",
+          "feature2": "Genetic_Disorders",
+          "correlation": 0.9552682048545467
+        },
+        {
+          "feature1": "Speech Delay/Language Disorder",
+          "feature2": "Depression",
+          "correlation": 0.9952565728347459
+        },
+        {
+          "feature1": "Speech Delay/Language Disorder",
+          "feature2": "Global developmental delay/intellectual disability",
+          "correlation": 0.9936794025042929
+        },
+        {
+          "feature1": "Speech Delay/Language Disorder",
+          "feature2": "Social/Behavioural Issues",
+          "correlation": 0.996842202071167
+        },
+        {
+          "feature1": "Speech Delay/Language Disorder",
+          "feature2": "Anxiety_disorder",
+          "correlation": 0.99369562764377
+        },
+        {
+          "feature1": "Learning disorder",
+          "feature2": "Depression",
+          "correlation": 0.9749694272598466
+        },
+        {
+          "feature1": "Learning disorder",
+          "feature2": "Global developmental delay/intellectual disability",
+          "correlation": 0.9702603236103506
+        },
+        {
+          "feature1": "Learning disorder",
+          "feature2": "Social/Behavioural Issues",
+          "correlation": 0.9734289890366647
+        },
+        {
+          "feature1": "Learning disorder",
+          "feature2": "Anxiety_disorder",
+          "correlation": 0.9703563194030717
+        },
+        {
+          "feature1": "Genetic_Disorders",
+          "feature2": "Depression",
+          "correlation": 0.9567802128650692
+        },
+        {
+          "feature1": "Genetic_Disorders",
+          "feature2": "Global developmental delay/intellectual disability",
+          "correlation": 0.9582943046249014
+        },
+        {
+          "feature1": "Genetic_Disorders",
+          "feature2": "Social/Behavioural Issues",
+          "correlation": 0.9582943046249017
+        },
+        {
+          "feature1": "Genetic_Disorders",
+          "feature2": "Anxiety_disorder",
+          "correlation": 0.9550169344615638
+        },
+        {
+          "feature1": "Depression",
+          "feature2": "Global developmental delay/intellectual disability",
+          "correlation": 0.9952575411464754
+        },
+        {
+          "feature1": "Depression",
+          "feature2": "Social/Behavioural Issues",
+          "correlation": 0.9984200138177528
+        },
+        {
+          "feature1": "Depression",
+          "feature2": "Anxiety_disorder",
+          "correlation": 0.9952684589610752
+        },
+        {
+          "feature1": "Global developmental delay/intellectual disability",
+          "feature2": "Social/Behavioural Issues",
+          "correlation": 0.9968378462496108
+        },
+        {
+          "feature1": "Global developmental delay/intellectual disability",
+          "feature2": "Anxiety_disorder",
+          "correlation": 0.9936819180462015
+        },
+        {
+          "feature1": "Social/Behavioural Issues",
+          "feature2": "Anxiety_disorder",
+          "correlation": 0.9968434578503399
+        }
+      ],
+      "correlation_matrix": {
+        "A1": {
+          "A1": 1.0,
+          "A2": 0.6224997194038249,
+          "A3": 0.46272935562732576,
+          "A4": 0.5176665535206747,
+          "A5": 0.5237188672715699,
+          "A6": 0.607946255348222,
+          "A7": 0.5895434995531732,
+          "A8": 0.4653292945733605,
+          "A9": 0.5407898683435964,
+          "A10_Autism_Spectrum_Quotient": 0.22292624980573147,
+          "Social_Responsiveness_Scale": 0.4775328018901918,
+          "Age_Years": 0.03959090902332953,
+          "Qchat_10_Score": 0.5547317972169449,
+          "Speech Delay/Language Disorder": 0.6081041370305998,
+          "Learning disorder": 0.5938213632095506,
+          "Genetic_Disorders": 0.5745215726348186,
+          "Depression": 0.6090666503035745,
+          "Global developmental delay/intellectual disability": 0.6100304900485987,
+          "Social/Behavioural Issues": 0.6100304900485984,
+          "Childhood Autism Rating Scale": 0.4243881971227135,
+          "Anxiety_disorder": 0.6050559193729319,
+          "Jaundice": 0.3122880437666251,
+          "Family_mem_with_ASD": 0.2492232639080262
+        },
+        "A2": {
+          "A1": 0.6224997194038249,
+          "A2": 1.0,
+          "A3": 0.39206364481447803,
+          "A4": 0.4704406539781037,
+          "A5": 0.48163432658688793,
+          "A6": 0.5277135770495128,
+          "A7": 0.5449426042386837,
+          "A8": 0.440767198038176,
+          "A9": 0.4695858005689389,
+          "A10_Autism_Spectrum_Quotient": 0.2464076085358584,
+          "Social_Responsiveness_Scale": 0.3723644765837588,
+          "Age_Years": 0.027922267427420135,
+          "Qchat_10_Score": 0.5363000341275952,
+          "Speech Delay/Language Disorder": 0.5193486314629926,
+          "Learning disorder": 0.5071504920560179,
+          "Genetic_Disorders": 0.4842665918839968,
+          "Depression": 0.5201706616394783,
+          "Global developmental delay/intellectual disability": 0.5209938246835135,
+          "Social/Behavioural Issues": 0.5209938246835136,
+          "Childhood Autism Rating Scale": 0.34903068020451283,
+          "Anxiety_disorder": 0.5189251051509276,
+          "Jaundice": 0.27272865755364684,
+          "Family_mem_with_ASD": 0.19425683002024316
+        },
+        "A3": {
+          "A1": 0.46272935562732576,
+          "A2": 0.39206364481447803,
+          "A3": 1.0,
+          "A4": 0.6854094402632114,
+          "A5": 0.5119760758142976,
+          "A6": 0.5211080456021732,
+          "A7": 0.4640194611606104,
+          "A8": 0.4663726885951445,
+          "A9": 0.5507672821029219,
+          "A10_Autism_Spectrum_Quotient": 0.14670154660127743,
+          "Social_Responsiveness_Scale": 0.3683927625294631,
+          "Age_Years": 0.0598769419524509,
+          "Qchat_10_Score": 0.5401013662168346,
+          "Speech Delay/Language Disorder": 0.48631189729181334,
+          "Learning disorder": 0.47488970426181343,
+          "Genetic_Disorders": 0.4705860585100884,
+          "Depression": 0.48708163659704845,
+          "Global developmental delay/intellectual disability": 0.48785243670601847,
+          "Social/Behavioural Issues": 0.4878524367060185,
+          "Childhood Autism Rating Scale": 0.32172583185841935,
+          "Anxiety_disorder": 0.48554132747814593,
+          "Jaundice": 0.2252753497798364,
+          "Family_mem_with_ASD": 0.16611640113891454
+        },
+        "A4": {
+          "A1": 0.5176665535206747,
+          "A2": 0.4704406539781037,
+          "A3": 0.6854094402632114,
+          "A4": 1.0,
+          "A5": 0.5497642854201267,
+          "A6": 0.5684643478620687,
+          "A7": 0.5914749367273573,
+          "A8": 0.48059341316737303,
+          "A9": 0.6103113474608753,
+          "A10_Autism_Spectrum_Quotient": 0.17685671943875875,
+          "Social_Responsiveness_Scale": 0.4673110522027803,
+          "Age_Years": 0.08574447714660323,
+          "Qchat_10_Score": 0.5715138206026904,
+          "Speech Delay/Language Disorder": 0.5852369410212734,
+          "Learning disorder": 0.5714912577553335,
+          "Genetic_Disorders": 0.5530752187624383,
+          "Depression": 0.5861632598690918,
+          "Global developmental delay/intellectual disability": 0.5870908553082024,
+          "Social/Behavioural Issues": 0.5870908553082029,
+          "Childhood Autism Rating Scale": 0.40772275034173044,
+          "Anxiety_disorder": 0.5854404467180792,
+          "Jaundice": 0.27762606095187314,
+          "Family_mem_with_ASD": 0.19151010515962735
+        },
+        "A5": {
+          "A1": 0.5237188672715699,
+          "A2": 0.48163432658688793,
+          "A3": 0.5119760758142976,
+          "A4": 0.5497642854201267,
+          "A5": 1.0,
+          "A6": 0.6137455132472,
+          "A7": 0.6002002981536672,
+          "A8": 0.5169003035995361,
+          "A9": 0.6116707826768977,
+          "A10_Autism_Spectrum_Quotient": 0.19243064253164177,
+          "Social_Responsiveness_Scale": 0.4767117802340027,
+          "Age_Years": 0.03491237951194778,
+          "Qchat_10_Score": 0.5708572651882391,
+          "Speech Delay/Language Disorder": 0.5727104085351337,
+          "Learning disorder": 0.5592589407158044,
+          "Genetic_Disorders": 0.553535537419665,
+          "Depression": 0.5736169002628116,
+          "Global developmental delay/intellectual disability": 0.5745246412573591,
+          "Social/Behavioural Issues": 0.5745246412573594,
+          "Childhood Autism Rating Scale": 0.3596079638609379,
+          "Anxiety_disorder": 0.5692568534235253,
+          "Jaundice": 0.28277321750247214,
+          "Family_mem_with_ASD": 0.17285010229937195
+        },
+        "A6": {
+          "A1": 0.607946255348222,
+          "A2": 0.5277135770495128,
+          "A3": 0.5211080456021732,
+          "A4": 0.5684643478620687,
+          "A5": 0.6137455132472,
+          "A6": 1.0,
+          "A7": 0.6245889346273363,
+          "A8": 0.5119436349572862,
+          "A9": 0.6206515535941685,
+          "A10_Autism_Spectrum_Quotient": 0.2144622602697954,
+          "Social_Responsiveness_Scale": 0.4956072837768608,
+          "Age_Years": 0.00843550008068585,
+          "Qchat_10_Score": 0.5858872188032938,
+          "Speech Delay/Language Disorder": 0.6161433472376551,
+          "Learning disorder": 0.6016717534200051,
+          "Genetic_Disorders": 0.5901221589883339,
+          "Depression": 0.6171185850524598,
+          "Global developmental delay/intellectual disability": 0.6146595013382687,
+          "Social/Behavioural Issues": 0.6180951668754354,
+          "Childhood Autism Rating Scale": 0.4506351523507508,
+          "Anxiety_disorder": 0.6131823913995731,
+          "Jaundice": 0.30462441329088213,
+          "Family_mem_with_ASD": 0.23959871655735043
+        },
+        "A7": {
+          "A1": 0.5895434995531732,
+          "A2": 0.5449426042386837,
+          "A3": 0.4640194611606104,
+          "A4": 0.5914749367273573,
+          "A5": 0.6002002981536672,
+          "A6": 0.6245889346273363,
+          "A7": 1.0,
+          "A8": 0.5004623607316426,
+          "A9": 0.6169693050151631,
+          "A10_Autism_Spectrum_Quotient": 0.2688492015623936,
+          "Social_Responsiveness_Scale": 0.5577579682770918,
+          "Age_Years": 0.050671516141491416,
+          "Qchat_10_Score": 0.5588906719545036,
+          "Speech Delay/Language Disorder": 0.6802440638047994,
+          "Learning disorder": 0.6642669120066254,
+          "Genetic_Disorders": 0.6392338096210818,
+          "Depression": 0.6813207608709819,
+          "Global developmental delay/intellectual disability": 0.6790810624946741,
+          "Social/Behavioural Issues": 0.6823989417697558,
+          "Childhood Autism Rating Scale": 0.4222391881904155,
+          "Anxiety_disorder": 0.6779253133925416,
+          "Jaundice": 0.3426082760656855,
+          "Family_mem_with_ASD": 0.22486831387020803
+        },
+        "A8": {
+          "A1": 0.4653292945733605,
+          "A2": 0.440767198038176,
+          "A3": 0.4663726885951445,
+          "A4": 0.48059341316737303,
+          "A5": 0.5169003035995361,
+          "A6": 0.5119436349572862,
+          "A7": 0.5004623607316426,
+          "A8": 1.0,
+          "A9": 0.5186550131878104,
+          "A10_Autism_Spectrum_Quotient": 0.19950706081104283,
+          "Social_Responsiveness_Scale": 0.41394305304014406,
+          "Age_Years": 0.05365251919264264,
+          "Qchat_10_Score": 0.5085325446868819,
+          "Speech Delay/Language Disorder": 0.5318366261807443,
+          "Learning disorder": 0.5193451764784259,
+          "Genetic_Disorders": 0.5164042237461094,
+          "Depression": 0.5326784224794056,
+          "Global developmental delay/intellectual disability": 0.5335213788859778,
+          "Social/Behavioural Issues": 0.533521378885978,
+          "Childhood Autism Rating Scale": 0.3147055153207306,
+          "Anxiety_disorder": 0.5278652741487944,
+          "Jaundice": 0.27567819781492503,
+          "Family_mem_with_ASD": 0.20530536551840525
+        },
+        "A9": {
+          "A1": 0.5407898683435964,
+          "A2": 0.4695858005689389,
+          "A3": 0.5507672821029219,
+          "A4": 0.6103113474608753,
+          "A5": 0.6116707826768977,
+          "A6": 0.6206515535941685,
+          "A7": 0.6169693050151631,
+          "A8": 0.5186550131878104,
+          "A9": 1.0,
+          "A10_Autism_Spectrum_Quotient": 0.16871935121202256,
+          "Social_Responsiveness_Scale": 0.4647880337034658,
+          "Age_Years": 0.02257614986469445,
+          "Qchat_10_Score": 0.5938599079743787,
+          "Speech Delay/Language Disorder": 0.5556664977587937,
+          "Learning disorder": 0.5426153467730803,
+          "Genetic_Disorders": 0.5350400322220348,
+          "Depression": 0.556546012215071,
+          "Global developmental delay/intellectual disability": 0.5574267387599255,
+          "Social/Behavioural Issues": 0.5574267387599257,
+          "Childhood Autism Rating Scale": 0.3693378050412906,
+          "Anxiety_disorder": 0.5520041136130294,
+          "Jaundice": 0.2941157860088522,
+          "Family_mem_with_ASD": 0.19778194842245114
+        },
+        "A10_Autism_Spectrum_Quotient": {
+          "A1": 0.22292624980573147,
+          "A2": 0.2464076085358584,
+          "A3": 0.14670154660127743,
+          "A4": 0.17685671943875875,
+          "A5": 0.19243064253164177,
+          "A6": 0.2144622602697954,
+          "A7": 0.2688492015623936,
+          "A8": 0.19950706081104283,
+          "A9": 0.16871935121202256,
+          "A10_Autism_Spectrum_Quotient": 1.0,
+          "Social_Responsiveness_Scale": 0.20462870860028995,
+          "Age_Years": 0.15521242153416454,
+          "Qchat_10_Score": 0.4484479879131569,
+          "Speech Delay/Language Disorder": 0.2788892462167997,
+          "Learning disorder": 0.26771913985372064,
+          "Genetic_Disorders": 0.26534657742374596,
+          "Depression": 0.28027316400169333,
+          "Global developmental delay/intellectual disability": 0.2784822745753069,
+          "Social/Behavioural Issues": 0.2816575000429252,
+          "Childhood Autism Rating Scale": 0.1794636254206064,
+          "Anxiety_disorder": 0.2780782491040873,
+          "Jaundice": 0.021276687669823678,
+          "Family_mem_with_ASD": 0.08701059756155818
+        },
+        "Social_Responsiveness_Scale": {
+          "A1": 0.4775328018901918,
+          "A2": 0.3723644765837588,
+          "A3": 0.3683927625294631,
+          "A4": 0.4673110522027803,
+          "A5": 0.4767117802340027,
+          "A6": 0.4956072837768608,
+          "A7": 0.5577579682770918,
+          "A8": 0.41394305304014406,
+          "A9": 0.4647880337034658,
+          "A10_Autism_Spectrum_Quotient": 0.20462870860028995,
+          "Social_Responsiveness_Scale": 1.0,
+          "Age_Years": 0.0524946485041405,
+          "Qchat_10_Score": 0.3632143956603283,
+          "Speech Delay/Language Disorder": 0.7290911121568833,
+          "Learning disorder": 0.7121958711075875,
+          "Genetic_Disorders": 0.7212464141528588,
+          "Depression": 0.730343986118579,
+          "Global developmental delay/intellectual disability": 0.7294590568042879,
+          "Social/Behavioural Issues": 0.7315984305246801,
+          "Childhood Autism Rating Scale": 0.48036417817998794,
+          "Anxiety_disorder": 0.7289785641777472,
+          "Jaundice": 0.34821130116453874,
+          "Family_mem_with_ASD": 0.15012931728307746
+        },
+        "Age_Years": {
+          "A1": 0.03959090902332953,
+          "A2": 0.027922267427420135,
+          "A3": 0.0598769419524509,
+          "A4": 0.08574447714660323,
+          "A5": 0.03491237951194778,
+          "A6": 0.00843550008068585,
+          "A7": 0.050671516141491416,
+          "A8": 0.05365251919264264,
+          "A9": 0.02257614986469445,
+          "A10_Autism_Spectrum_Quotient": 0.15521242153416454,
+          "Social_Responsiveness_Scale": 0.0524946485041405,
+          "Age_Years": 1.0,
+          "Qchat_10_Score": 0.18400283908094317,
+          "Speech Delay/Language Disorder": 0.12346544031114416,
+          "Learning disorder": 0.13315474253630602,
+          "Genetic_Disorders": 0.10832097632409224,
+          "Depression": 0.12762780410353047,
+          "Global developmental delay/intellectual disability": 0.12846372485599994,
+          "Social/Behavioural Issues": 0.1251378125937395,
+          "Childhood Autism Rating Scale": 0.06878323452894067,
+          "Anxiety_disorder": 0.12459392545264061,
+          "Jaundice": 0.04231021658918955,
+          "Family_mem_with_ASD": 0.02745392578793359
+        },
+        "Qchat_10_Score": {
+          "A1": 0.5547317972169449,
+          "A2": 0.5363000341275952,
+          "A3": 0.5401013662168346,
+          "A4": 0.5715138206026904,
+          "A5": 0.5708572651882391,
+          "A6": 0.5858872188032938,
+          "A7": 0.5588906719545036,
+          "A8": 0.5085325446868819,
+          "A9": 0.5938599079743787,
+          "A10_Autism_Spectrum_Quotient": 0.4484479879131569,
+          "Social_Responsiveness_Scale": 0.3632143956603283,
+          "Age_Years": 0.18400283908094317,
+          "Qchat_10_Score": 1.0,
+          "Speech Delay/Language Disorder": 0.4471378502901526,
+          "Learning disorder": 0.44148529330987035,
+          "Genetic_Disorders": 0.42210563122047334,
+          "Depression": 0.4482966899022829,
+          "Global developmental delay/intellectual disability": 0.447245847664935,
+          "Social/Behavioural Issues": 0.4483511307739882,
+          "Childhood Autism Rating Scale": 0.31098736267968036,
+          "Anxiety_disorder": 0.44349053347782547,
+          "Jaundice": 0.20321310780086582,
+          "Family_mem_with_ASD": 0.1306012698144894
+        },
+        "Speech Delay/Language Disorder": {
+          "A1": 0.6081041370305998,
+          "A2": 0.5193486314629926,
+          "A3": 0.48631189729181334,
+          "A4": 0.5852369410212734,
+          "A5": 0.5727104085351337,
+          "A6": 0.6161433472376551,
+          "A7": 0.6802440638047994,
+          "A8": 0.5318366261807443,
+          "A9": 0.5556664977587937,
+          "A10_Autism_Spectrum_Quotient": 0.2788892462167997,
+          "Social_Responsiveness_Scale": 0.7290911121568833,
+          "Age_Years": 0.12346544031114416,
+          "Qchat_10_Score": 0.4471378502901526,
+          "Speech Delay/Language Disorder": 1.0,
+          "Learning disorder": 0.9765126185610347,
+          "Genetic_Disorders": 0.9552682048545467,
+          "Depression": 0.9952565728347459,
+          "Global developmental delay/intellectual disability": 0.9936794025042929,
+          "Social/Behavioural Issues": 0.996842202071167,
+          "Childhood Autism Rating Scale": 0.6474219198524294,
+          "Anxiety_disorder": 0.99369562764377,
+          "Jaundice": 0.5149372441392583,
+          "Family_mem_with_ASD": 0.385585015035534
+        },
+        "Learning disorder": {
+          "A1": 0.5938213632095506,
+          "A2": 0.5071504920560179,
+          "A3": 0.47488970426181343,
+          "A4": 0.5714912577553335,
+          "A5": 0.5592589407158044,
+          "A6": 0.6016717534200051,
+          "A7": 0.6642669120066254,
+          "A8": 0.5193451764784259,
+          "A9": 0.5426153467730803,
+          "A10_Autism_Spectrum_Quotient": 0.26771913985372064,
+          "Social_Responsiveness_Scale": 0.7121958711075875,
+          "Age_Years": 0.13315474253630602,
+          "Qchat_10_Score": 0.44148529330987035,
+          "Speech Delay/Language Disorder": 0.9765126185610347,
+          "Learning disorder": 1.0,
+          "Genetic_Disorders": 0.932831456150615,
+          "Depression": 0.9749694272598466,
+          "Global developmental delay/intellectual disability": 0.9702603236103506,
+          "Social/Behavioural Issues": 0.9734289890366647,
+          "Childhood Autism Rating Scale": 0.6322156742689107,
+          "Anxiety_disorder": 0.9703563194030717,
+          "Jaundice": 0.5246916880118966,
+          "Family_mem_with_ASD": 0.3766197623790424
+        },
+        "Genetic_Disorders": {
+          "A1": 0.5745215726348186,
+          "A2": 0.4842665918839968,
+          "A3": 0.4705860585100884,
+          "A4": 0.5530752187624383,
+          "A5": 0.553535537419665,
+          "A6": 0.5901221589883339,
+          "A7": 0.6392338096210818,
+          "A8": 0.5164042237461094,
+          "A9": 0.5350400322220348,
+          "A10_Autism_Spectrum_Quotient": 0.26534657742374596,
+          "Social_Responsiveness_Scale": 0.7212464141528588,
+          "Age_Years": 0.10832097632409224,
+          "Qchat_10_Score": 0.42210563122047334,
+          "Speech Delay/Language Disorder": 0.9552682048545467,
+          "Learning disorder": 0.932831456150615,
+          "Genetic_Disorders": 1.0,
+          "Depression": 0.9567802128650692,
+          "Global developmental delay/intellectual disability": 0.9582943046249014,
+          "Social/Behavioural Issues": 0.9582943046249017,
+          "Childhood Autism Rating Scale": 0.6285909680435914,
+          "Anxiety_disorder": 0.9550169344615638,
+          "Jaundice": 0.49342409214299227,
+          "Family_mem_with_ASD": 0.36600626252738394
+        },
+        "Depression": {
+          "A1": 0.6090666503035745,
+          "A2": 0.5201706616394783,
+          "A3": 0.48708163659704845,
+          "A4": 0.5861632598690918,
+          "A5": 0.5736169002628116,
+          "A6": 0.6171185850524598,
+          "A7": 0.6813207608709819,
+          "A8": 0.5326784224794056,
+          "A9": 0.556546012215071,
+          "A10_Autism_Spectrum_Quotient": 0.28027316400169333,
+          "Social_Responsiveness_Scale": 0.730343986118579,
+          "Age_Years": 0.12762780410353047,
+          "Qchat_10_Score": 0.4482966899022829,
+          "Speech Delay/Language Disorder": 0.9952565728347459,
+          "Learning disorder": 0.9749694272598466,
+          "Genetic_Disorders": 0.9567802128650692,
+          "Depression": 1.0,
+          "Global developmental delay/intellectual disability": 0.9952575411464754,
+          "Social/Behavioural Issues": 0.9984200138177528,
+          "Childhood Autism Rating Scale": 0.6484466657028943,
+          "Anxiety_disorder": 0.9952684589610752,
+          "Jaundice": 0.5140447653166047,
+          "Family_mem_with_ASD": 0.3900096041883855
+        },
+        "Global developmental delay/intellectual disability": {
+          "A1": 0.6100304900485987,
+          "A2": 0.5209938246835135,
+          "A3": 0.48785243670601847,
+          "A4": 0.5870908553082024,
+          "A5": 0.5745246412573591,
+          "A6": 0.6146595013382687,
+          "A7": 0.6790810624946741,
+          "A8": 0.5335213788859778,
+          "A9": 0.5574267387599255,
+          "A10_Autism_Spectrum_Quotient": 0.2784822745753069,
+          "Social_Responsiveness_Scale": 0.7294590568042879,
+          "Age_Years": 0.12846372485599994,
+          "Qchat_10_Score": 0.447245847664935,
+          "Speech Delay/Language Disorder": 0.9936794025042929,
+          "Learning disorder": 0.9702603236103506,
+          "Genetic_Disorders": 0.9582943046249014,
+          "Depression": 0.9952575411464754,
+          "Global developmental delay/intellectual disability": 1.0,
+          "Social/Behavioural Issues": 0.9968378462496108,
+          "Childhood Autism Rating Scale": 0.6479342336406931,
+          "Anxiety_disorder": 0.9936819180462015,
+          "Jaundice": 0.513153754131316,
+          "Family_mem_with_ASD": 0.39106371259345163
+        },
+        "Social/Behavioural Issues": {
+          "A1": 0.6100304900485984,
+          "A2": 0.5209938246835136,
+          "A3": 0.4878524367060185,
+          "A4": 0.5870908553082029,
+          "A5": 0.5745246412573594,
+          "A6": 0.6180951668754354,
+          "A7": 0.6823989417697558,
+          "A8": 0.533521378885978,
+          "A9": 0.5574267387599257,
+          "A10_Autism_Spectrum_Quotient": 0.2816575000429252,
+          "Social_Responsiveness_Scale": 0.7315984305246801,
+          "Age_Years": 0.1251378125937395,
+          "Qchat_10_Score": 0.4483511307739882,
+          "Speech Delay/Language Disorder": 0.996842202071167,
+          "Learning disorder": 0.9734289890366647,
+          "Genetic_Disorders": 0.9582943046249017,
+          "Depression": 0.9984200138177528,
+          "Global developmental delay/intellectual disability": 0.9968378462496108,
+          "Social/Behavioural Issues": 1.0,
+          "Childhood Autism Rating Scale": 0.6494728237902255,
+          "Anxiety_disorder": 0.9968434578503399,
+          "Jaundice": 0.5131537541313164,
+          "Family_mem_with_ASD": 0.3876931600655003
+        },
+        "Childhood Autism Rating Scale": {
+          "A1": 0.4243881971227135,
+          "A2": 0.34903068020451283,
+          "A3": 0.32172583185841935,
+          "A4": 0.40772275034173044,
+          "A5": 0.3596079638609379,
+          "A6": 0.4506351523507508,
+          "A7": 0.4222391881904155,
+          "A8": 0.3147055153207306,
+          "A9": 0.3693378050412906,
+          "A10_Autism_Spectrum_Quotient": 0.1794636254206064,
+          "Social_Responsiveness_Scale": 0.48036417817998794,
+          "Age_Years": 0.06878323452894067,
+          "Qchat_10_Score": 0.31098736267968036,
+          "Speech Delay/Language Disorder": 0.6474219198524294,
+          "Learning disorder": 0.6322156742689107,
+          "Genetic_Disorders": 0.6285909680435914,
+          "Depression": 0.6484466657028943,
+          "Global developmental delay/intellectual disability": 0.6479342336406931,
+          "Social/Behavioural Issues": 0.6494728237902255,
+          "Childhood Autism Rating Scale": 1.0,
+          "Anxiety_disorder": 0.6438379466881412,
+          "Jaundice": 0.3178846479130508,
+          "Family_mem_with_ASD": 0.24715803819135265
+        },
+        "Anxiety_disorder": {
+          "A1": 0.6050559193729319,
+          "A2": 0.5189251051509276,
+          "A3": 0.48554132747814593,
+          "A4": 0.5854404467180792,
+          "A5": 0.5692568534235253,
+          "A6": 0.6131823913995731,
+          "A7": 0.6779253133925416,
+          "A8": 0.5278652741487944,
+          "A9": 0.5520041136130294,
+          "A10_Autism_Spectrum_Quotient": 0.2780782491040873,
+          "Social_Responsiveness_Scale": 0.7289785641777472,
+          "Age_Years": 0.12459392545264061,
+          "Qchat_10_Score": 0.44349053347782547,
+          "Speech Delay/Language Disorder": 0.99369562764377,
+          "Learning disorder": 0.9703563194030717,
+          "Genetic_Disorders": 0.9550169344615638,
+          "Depression": 0.9952684589610752,
+          "Global developmental delay/intellectual disability": 0.9936819180462015,
+          "Social/Behavioural Issues": 0.9968434578503399,
+          "Childhood Autism Rating Scale": 0.6438379466881412,
+          "Anxiety_disorder": 1.0,
+          "Jaundice": 0.5113761046507336,
+          "Family_mem_with_ASD": 0.38306454505285453
+        },
+        "Jaundice": {
+          "A1": 0.3122880437666251,
+          "A2": 0.27272865755364684,
+          "A3": 0.2252753497798364,
+          "A4": 0.27762606095187314,
+          "A5": 0.28277321750247214,
+          "A6": 0.30462441329088213,
+          "A7": 0.3426082760656855,
+          "A8": 0.27567819781492503,
+          "A9": 0.2941157860088522,
+          "A10_Autism_Spectrum_Quotient": 0.021276687669823678,
+          "Social_Responsiveness_Scale": 0.34821130116453874,
+          "Age_Years": 0.04231021658918955,
+          "Qchat_10_Score": 0.20321310780086582,
+          "Speech Delay/Language Disorder": 0.5149372441392583,
+          "Learning disorder": 0.5246916880118966,
+          "Genetic_Disorders": 0.49342409214299227,
+          "Depression": 0.5140447653166047,
+          "Global developmental delay/intellectual disability": 0.513153754131316,
+          "Social/Behavioural Issues": 0.5131537541313164,
+          "Childhood Autism Rating Scale": 0.3178846479130508,
+          "Anxiety_disorder": 0.5113761046507336,
+          "Jaundice": 1.0,
+          "Family_mem_with_ASD": 0.2386975702784754
+        },
+        "Family_mem_with_ASD": {
+          "A1": 0.2492232639080262,
+          "A2": 0.19425683002024316,
+          "A3": 0.16611640113891454,
+          "A4": 0.19151010515962735,
+          "A5": 0.17285010229937195,
+          "A6": 0.23959871655735043,
+          "A7": 0.22486831387020803,
+          "A8": 0.20530536551840525,
+          "A9": 0.19778194842245114,
+          "A10_Autism_Spectrum_Quotient": 0.08701059756155818,
+          "Social_Responsiveness_Scale": 0.15012931728307746,
+          "Age_Years": 0.02745392578793359,
+          "Qchat_10_Score": 0.1306012698144894,
+          "Speech Delay/Language Disorder": 0.385585015035534,
+          "Learning disorder": 0.3766197623790424,
+          "Genetic_Disorders": 0.36600626252738394,
+          "Depression": 0.3900096041883855,
+          "Global developmental delay/intellectual disability": 0.39106371259345163,
+          "Social/Behavioural Issues": 0.3876931600655003,
+          "Childhood Autism Rating Scale": 0.24715803819135265,
+          "Anxiety_disorder": 0.38306454505285453,
+          "Jaundice": 0.2386975702784754,
+          "Family_mem_with_ASD": 1.0
+        }
+      },
+      "numeric_columns": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10_Autism_Spectrum_Quotient",
+        "Social_Responsiveness_Scale",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Speech Delay/Language Disorder",
+        "Learning disorder",
+        "Genetic_Disorders",
+        "Depression",
+        "Global developmental delay/intellectual disability",
+        "Social/Behavioural Issues",
+        "Childhood Autism Rating Scale",
+        "Anxiety_disorder",
+        "Jaundice",
+        "Family_mem_with_ASD"
+      ]
+    },
+    "variance_analysis": {
+      "threshold": 0.01,
+      "low_variance_features": []
+    },
+    "duplicate_analysis": {
+      "exact_duplicates": []
+    },
+    "clinical_analysis": {
+      "clinical_groups": {
+        "behavioral_core": [
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9",
+          "A10_Autism_Spectrum_Quotient"
+        ],
+        "assessment_scales": [
+          "Social_Responsiveness_Scale",
+          "Qchat_10_Score",
+          "Childhood Autism Rating Scale"
+        ],
+        "demographic": [
+          "Age_Years",
+          "Speech Delay/Language Disorder",
+          "Sex"
+        ],
+        "medical_history": [
+          "Speech Delay/Language Disorder",
+          "Learning disorder",
+          "Genetic_Disorders",
+          "Depression",
+          "Global developmental delay/intellectual disability",
+          "Anxiety_disorder",
+          "Jaundice"
+        ]
+      },
+      "group_correlations": {
+        "behavioral_core": {
+          "features": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5",
+            "A6",
+            "A7",
+            "A8",
+            "A9",
+            "A10_Autism_Spectrum_Quotient"
+          ],
+          "numeric_features": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5",
+            "A6",
+            "A7",
+            "A8",
+            "A9",
+            "A10_Autism_Spectrum_Quotient"
+          ],
+          "count": 10,
+          "numeric_count": 10,
+          "avg_internal_correlation": 0.47178401963670935,
+          "correlation_matrix": {
+            "A1": {
+              "A1": 1.0,
+              "A2": 0.6224997194038249,
+              "A3": 0.46272935562732576,
+              "A4": 0.5176665535206747,
+              "A5": 0.5237188672715699,
+              "A6": 0.607946255348222,
+              "A7": 0.5895434995531732,
+              "A8": 0.4653292945733605,
+              "A9": 0.5407898683435964,
+              "A10_Autism_Spectrum_Quotient": 0.22292624980573147
+            },
+            "A2": {
+              "A1": 0.6224997194038249,
+              "A2": 1.0,
+              "A3": 0.39206364481447803,
+              "A4": 0.4704406539781037,
+              "A5": 0.48163432658688793,
+              "A6": 0.5277135770495128,
+              "A7": 0.5449426042386837,
+              "A8": 0.440767198038176,
+              "A9": 0.4695858005689389,
+              "A10_Autism_Spectrum_Quotient": 0.2464076085358584
+            },
+            "A3": {
+              "A1": 0.46272935562732576,
+              "A2": 0.39206364481447803,
+              "A3": 1.0,
+              "A4": 0.6854094402632114,
+              "A5": 0.5119760758142976,
+              "A6": 0.5211080456021732,
+              "A7": 0.4640194611606104,
+              "A8": 0.4663726885951445,
+              "A9": 0.5507672821029219,
+              "A10_Autism_Spectrum_Quotient": 0.14670154660127743
+            },
+            "A4": {
+              "A1": 0.5176665535206747,
+              "A2": 0.4704406539781037,
+              "A3": 0.6854094402632114,
+              "A4": 1.0,
+              "A5": 0.5497642854201267,
+              "A6": 0.5684643478620687,
+              "A7": 0.5914749367273573,
+              "A8": 0.48059341316737303,
+              "A9": 0.6103113474608753,
+              "A10_Autism_Spectrum_Quotient": 0.17685671943875875
+            },
+            "A5": {
+              "A1": 0.5237188672715699,
+              "A2": 0.48163432658688793,
+              "A3": 0.5119760758142976,
+              "A4": 0.5497642854201267,
+              "A5": 1.0,
+              "A6": 0.6137455132472,
+              "A7": 0.6002002981536672,
+              "A8": 0.5169003035995361,
+              "A9": 0.6116707826768977,
+              "A10_Autism_Spectrum_Quotient": 0.19243064253164177
+            },
+            "A6": {
+              "A1": 0.607946255348222,
+              "A2": 0.5277135770495128,
+              "A3": 0.5211080456021732,
+              "A4": 0.5684643478620687,
+              "A5": 0.6137455132472,
+              "A6": 1.0,
+              "A7": 0.6245889346273363,
+              "A8": 0.5119436349572862,
+              "A9": 0.6206515535941685,
+              "A10_Autism_Spectrum_Quotient": 0.2144622602697954
+            },
+            "A7": {
+              "A1": 0.5895434995531732,
+              "A2": 0.5449426042386837,
+              "A3": 0.4640194611606104,
+              "A4": 0.5914749367273573,
+              "A5": 0.6002002981536672,
+              "A6": 0.6245889346273363,
+              "A7": 1.0,
+              "A8": 0.5004623607316426,
+              "A9": 0.6169693050151631,
+              "A10_Autism_Spectrum_Quotient": 0.2688492015623936
+            },
+            "A8": {
+              "A1": 0.4653292945733605,
+              "A2": 0.440767198038176,
+              "A3": 0.4663726885951445,
+              "A4": 0.48059341316737303,
+              "A5": 0.5169003035995361,
+              "A6": 0.5119436349572862,
+              "A7": 0.5004623607316426,
+              "A8": 1.0,
+              "A9": 0.5186550131878104,
+              "A10_Autism_Spectrum_Quotient": 0.19950706081104283
+            },
+            "A9": {
+              "A1": 0.5407898683435964,
+              "A2": 0.4695858005689389,
+              "A3": 0.5507672821029219,
+              "A4": 0.6103113474608753,
+              "A5": 0.6116707826768977,
+              "A6": 0.6206515535941685,
+              "A7": 0.6169693050151631,
+              "A8": 0.5186550131878104,
+              "A9": 1.0,
+              "A10_Autism_Spectrum_Quotient": 0.16871935121202256
+            },
+            "A10_Autism_Spectrum_Quotient": {
+              "A1": 0.22292624980573147,
+              "A2": 0.2464076085358584,
+              "A3": 0.14670154660127743,
+              "A4": 0.17685671943875875,
+              "A5": 0.19243064253164177,
+              "A6": 0.2144622602697954,
+              "A7": 0.2688492015623936,
+              "A8": 0.19950706081104283,
+              "A9": 0.16871935121202256,
+              "A10_Autism_Spectrum_Quotient": 1.0
+            }
+          }
+        },
+        "assessment_scales": {
+          "features": [
+            "Social_Responsiveness_Scale",
+            "Qchat_10_Score",
+            "Childhood Autism Rating Scale"
+          ],
+          "numeric_features": [
+            "Social_Responsiveness_Scale",
+            "Qchat_10_Score",
+            "Childhood Autism Rating Scale"
+          ],
+          "count": 3,
+          "numeric_count": 3,
+          "avg_internal_correlation": 0.38485531217333224,
+          "correlation_matrix": {
+            "Social_Responsiveness_Scale": {
+              "Social_Responsiveness_Scale": 1.0,
+              "Qchat_10_Score": 0.3632143956603283,
+              "Childhood Autism Rating Scale": 0.48036417817998794
+            },
+            "Qchat_10_Score": {
+              "Social_Responsiveness_Scale": 0.3632143956603283,
+              "Qchat_10_Score": 1.0,
+              "Childhood Autism Rating Scale": 0.31098736267968036
+            },
+            "Childhood Autism Rating Scale": {
+              "Social_Responsiveness_Scale": 0.48036417817998794,
+              "Qchat_10_Score": 0.31098736267968036,
+              "Childhood Autism Rating Scale": 1.0
+            }
+          }
+        },
+        "demographic": {
+          "features": [
+            "Age_Years",
+            "Speech Delay/Language Disorder",
+            "Sex"
+          ],
+          "numeric_features": [
+            "Age_Years",
+            "Speech Delay/Language Disorder"
+          ],
+          "count": 3,
+          "numeric_count": 2,
+          "avg_internal_correlation": 0.12346544031114416,
+          "correlation_matrix": {
+            "Age_Years": {
+              "Age_Years": 1.0,
+              "Speech Delay/Language Disorder": 0.12346544031114416
+            },
+            "Speech Delay/Language Disorder": {
+              "Age_Years": 0.12346544031114416,
+              "Speech Delay/Language Disorder": 1.0
+            }
+          }
+        },
+        "medical_history": {
+          "features": [
+            "Speech Delay/Language Disorder",
+            "Learning disorder",
+            "Genetic_Disorders",
+            "Depression",
+            "Global developmental delay/intellectual disability",
+            "Anxiety_disorder",
+            "Jaundice"
+          ],
+          "numeric_features": [
+            "Speech Delay/Language Disorder",
+            "Learning disorder",
+            "Genetic_Disorders",
+            "Depression",
+            "Global developmental delay/intellectual disability",
+            "Anxiety_disorder",
+            "Jaundice"
+          ],
+          "count": 7,
+          "numeric_count": 7,
+          "avg_internal_correlation": 0.8423217605390649,
+          "correlation_matrix": {
+            "Speech Delay/Language Disorder": {
+              "Speech Delay/Language Disorder": 1.0,
+              "Learning disorder": 0.9765126185610347,
+              "Genetic_Disorders": 0.9552682048545467,
+              "Depression": 0.9952565728347459,
+              "Global developmental delay/intellectual disability": 0.9936794025042929,
+              "Anxiety_disorder": 0.99369562764377,
+              "Jaundice": 0.5149372441392583
+            },
+            "Learning disorder": {
+              "Speech Delay/Language Disorder": 0.9765126185610347,
+              "Learning disorder": 1.0,
+              "Genetic_Disorders": 0.932831456150615,
+              "Depression": 0.9749694272598466,
+              "Global developmental delay/intellectual disability": 0.9702603236103506,
+              "Anxiety_disorder": 0.9703563194030717,
+              "Jaundice": 0.5246916880118966
+            },
+            "Genetic_Disorders": {
+              "Speech Delay/Language Disorder": 0.9552682048545467,
+              "Learning disorder": 0.932831456150615,
+              "Genetic_Disorders": 1.0,
+              "Depression": 0.9567802128650692,
+              "Global developmental delay/intellectual disability": 0.9582943046249014,
+              "Anxiety_disorder": 0.9550169344615638,
+              "Jaundice": 0.49342409214299227
+            },
+            "Depression": {
+              "Speech Delay/Language Disorder": 0.9952565728347459,
+              "Learning disorder": 0.9749694272598466,
+              "Genetic_Disorders": 0.9567802128650692,
+              "Depression": 1.0,
+              "Global developmental delay/intellectual disability": 0.9952575411464754,
+              "Anxiety_disorder": 0.9952684589610752,
+              "Jaundice": 0.5140447653166047
+            },
+            "Global developmental delay/intellectual disability": {
+              "Speech Delay/Language Disorder": 0.9936794025042929,
+              "Learning disorder": 0.9702603236103506,
+              "Genetic_Disorders": 0.9582943046249014,
+              "Depression": 0.9952575411464754,
+              "Global developmental delay/intellectual disability": 1.0,
+              "Anxiety_disorder": 0.9936819180462015,
+              "Jaundice": 0.513153754131316
+            },
+            "Anxiety_disorder": {
+              "Speech Delay/Language Disorder": 0.99369562764377,
+              "Learning disorder": 0.9703563194030717,
+              "Genetic_Disorders": 0.9550169344615638,
+              "Depression": 0.9952684589610752,
+              "Global developmental delay/intellectual disability": 0.9936819180462015,
+              "Anxiety_disorder": 1.0,
+              "Jaundice": 0.5113761046507336
+            },
+            "Jaundice": {
+              "Speech Delay/Language Disorder": 0.5149372441392583,
+              "Learning disorder": 0.5246916880118966,
+              "Genetic_Disorders": 0.49342409214299227,
+              "Depression": 0.5140447653166047,
+              "Global developmental delay/intellectual disability": 0.513153754131316,
+              "Anxiety_disorder": 0.5113761046507336,
+              "Jaundice": 1.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "quality_assessment": {
+    "train": {
+      "shape": [
+        1270,
+        25
+      ],
+      "missing_values": 0,
+      "infinite_values": 0,
+      "numeric_features": 25,
+      "target_encoded": true
+    },
+    "val": {
+      "shape": [
+        318,
+        25
+      ],
+      "missing_values": 0,
+      "infinite_values": 0,
+      "numeric_features": 25,
+      "target_encoded": true
+    },
+    "test": {
+      "shape": [
+        397,
+        25
+      ],
+      "missing_values": 0,
+      "infinite_values": 0,
+      "numeric_features": 25,
+      "target_encoded": true
+    }
+  },
+  "preprocessing_pipeline": {
+    "components": [
+      "numeric_imputer",
+      "categorical_imputer",
+      "label_encoders",
+      "scaler",
+      "scale_columns",
+      "feature_columns"
+    ],
+    "feature_columns": {
+      "numeric": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10_Autism_Spectrum_Quotient",
+        "Social_Responsiveness_Scale",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Childhood Autism Rating Scale"
+      ],
+      "categorical": [
+        "Speech Delay/Language Disorder",
+        "Learning disorder",
+        "Genetic_Disorders",
+        "Depression",
+        "Global developmental delay/intellectual disability",
+        "Social/Behavioural Issues",
+        "Anxiety_disorder",
+        "Sex",
+        "Jaundice",
+        "Family_mem_with_ASD",
+        "Who_completed_the_test"
+      ],
+      "scale": [
+        "Social_Responsiveness_Scale",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Childhood Autism Rating Scale"
+      ],
+      "binary": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10_Autism_Spectrum_Quotient"
+      ]
+    }
+  },
+  "processed_shapes": {
+    "train": {
+      "features": [
+        1270,
+        25
+      ],
+      "target": 1270
+    },
+    "val": {
+      "features": [
+        318,
+        25
+      ],
+      "target": 318
+    },
+    "test": {
+      "features": [
+        397,
+        25
+      ],
+      "target": 397
+    }
+  },
+  "publication_ready": {
+    "ieee_compliant_visualizations": true,
+    "statistical_rigor": true,
+    "clinical_interpretation": true,
+    "effect_sizes_calculated": true,
+    "preprocessed_csv_saved": true
+  }
+}

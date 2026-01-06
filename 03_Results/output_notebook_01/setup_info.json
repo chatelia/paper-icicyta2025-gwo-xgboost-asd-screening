@@ -1,0 +1,165 @@
+{
+  "timestamp": "2025-10-06T06:28:01.904245",
+  "project_paths": {
+    "root": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project",
+    "dataset": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/01_Dataset",
+    "splits": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/01_Dataset/splits/no_ethnicity",
+    "preprocessed": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/01_Dataset/splits/no_ethnicity/preprocessed",
+    "preprocessors": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/01_Dataset/preprocessors",
+    "results": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results",
+    "baseline_results": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/03_Results/baseline_experiments"
+  },
+  "split_files": {
+    "train": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/01_Dataset/splits/no_ethnicity/train_set_clean.csv",
+    "val": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/01_Dataset/splits/no_ethnicity/val_set_clean.csv",
+    "test": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/01_Dataset/splits/no_ethnicity/test_set_clean.csv"
+  },
+  "file_status": "cleaned",
+  "configuration": {
+    "random_state": 42,
+    "test_size": 0.2,
+    "val_size": 0.16,
+    "train_size": 0.64,
+    "cv_folds": 5,
+    "scoring_metric": "roc_auc",
+    "target_column": "ASD_traits"
+  },
+  "xgboost_config": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "random_state": 42,
+    "n_jobs": -1,
+    "verbosity": 0
+  },
+  "package_versions": {
+    "pandas": "2.2.2",
+    "numpy": "2.0.2",
+    "scikit-learn": "1.6.1",
+    "xgboost": "3.0.5"
+  },
+  "splits_info": {
+    "train": {
+      "shape": [
+        1270,
+        26
+      ],
+      "columns": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10_Autism_Spectrum_Quotient",
+        "Social_Responsiveness_Scale",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Speech Delay/Language Disorder",
+        "Learning disorder",
+        "Genetic_Disorders",
+        "Depression",
+        "Global developmental delay/intellectual disability",
+        "Social/Behavioural Issues",
+        "Childhood Autism Rating Scale",
+        "Anxiety_disorder",
+        "Sex",
+        "Jaundice",
+        "Family_mem_with_ASD",
+        "Who_completed_the_test",
+        "ASD_traits"
+      ],
+      "target_dist": {
+        "1": 687,
+        "0": 583
+      },
+      "file_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/01_Dataset/splits/no_ethnicity/train_set_clean.csv"
+    },
+    "val": {
+      "shape": [
+        318,
+        26
+      ],
+      "columns": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10_Autism_Spectrum_Quotient",
+        "Social_Responsiveness_Scale",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Speech Delay/Language Disorder",
+        "Learning disorder",
+        "Genetic_Disorders",
+        "Depression",
+        "Global developmental delay/intellectual disability",
+        "Social/Behavioural Issues",
+        "Childhood Autism Rating Scale",
+        "Anxiety_disorder",
+        "Sex",
+        "Jaundice",
+        "Family_mem_with_ASD",
+        "Who_completed_the_test",
+        "ASD_traits"
+      ],
+      "target_dist": {
+        "1": 172,
+        "0": 146
+      },
+      "file_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/01_Dataset/splits/no_ethnicity/val_set_clean.csv"
+    },
+    "test": {
+      "shape": [
+        397,
+        26
+      ],
+      "columns": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10_Autism_Spectrum_Quotient",
+        "Social_Responsiveness_Scale",
+        "Age_Years",
+        "Qchat_10_Score",
+        "Speech Delay/Language Disorder",
+        "Learning disorder",
+        "Genetic_Disorders",
+        "Depression",
+        "Global developmental delay/intellectual disability",
+        "Social/Behavioural Issues",
+        "Childhood Autism Rating Scale",
+        "Anxiety_disorder",
+        "Sex",
+        "Jaundice",
+        "Family_mem_with_ASD",
+        "Who_completed_the_test",
+        "ASD_traits"
+      ],
+      "target_dist": {
+        "1": 215,
+        "0": 182
+      },
+      "file_path": "/content/drive/MyDrive/ASD_GWO_XGBoost_Project/01_Dataset/splits/no_ethnicity/test_set_clean.csv"
+    }
+  },
+  "bias_assessment": {
+    "ethnicity_features_found": [],
+    "bias_risk": "low",
+    "recommendation": "Proceed with current dataset"
+  },
+  "cell_status": "completed"
+}
